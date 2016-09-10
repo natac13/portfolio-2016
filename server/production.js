@@ -9,7 +9,7 @@ import connectToDB from './dbConnection.js';
 
 import errorHandler from './routes/errorHandler.js';
 
-
+require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 8080;
 const env = process.env.NODE_ENV;
