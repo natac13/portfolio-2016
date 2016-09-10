@@ -20,7 +20,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "lint": "eslint app/",
-    "start-production": "node -r dotenv/config build/production.server.bundle.js",
+    "start-production": "pm2 start build/production.server.bundle.js",
     "start:demo": "cross-env NODE_ENV=production node -r dotenv/config build/production.server.bundle.js"
   },
   "repository": {
