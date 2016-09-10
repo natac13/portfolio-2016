@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-2016-natac",
+  "version": "1.0.0",
+  "description": "My new portfolio page",
+  "main": "server/development.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natac13/portfolio-2016.git"
+  },
+  "author": "Sean Campbell <sean.campbell13@gmail.com> (http://seancampbellnatac.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/natac13/portfolio-2016/issues"
+  },
+  "homepage": "https://github.com/natac13/portfolio-2016#readme"
+}
