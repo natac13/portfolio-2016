@@ -16,7 +16,7 @@ const env = process.env.NODE_ENV;
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' });
 
 // connect to DB
-connectToDB(env, process.env.MONGO_URI);
+// connectToDB(env, process.env.MONGO_URI);
 app.use(morgan('combined', { stream: accessLogStream }));
 app.use(compression());
 // body-parser
