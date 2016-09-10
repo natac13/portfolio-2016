@@ -1,0 +1,35 @@
+.footer {
+}
+
+.thanks {
+  background-color: $background;
+  font-size: ms(0);
+  text-align: center;
+}
+
+.disclaimer {
+  font-size: ms(-1);
+  text-decoration: underline;
+  text-align: center;
+}
+.madeIn {
+  font-size: ms(-2);
+  text-align: center;
+}
+
+.copyright {
+  @extend .madeIn;
+
+  a {
+    font-weight: bold;
+    color: $color-primary-dark;
+    text-decoration: none;
+  }
+}
+
+.finalWord {
+  margin-bottom: 0.5em;
+  p {
+    margin: 0;
+  }
+}
