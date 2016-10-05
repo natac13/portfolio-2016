@@ -11,9 +11,10 @@ function Main(props) {
   return (
     <div className={style.wrapper}>
       <Header appName={appName} />
-      Future upgrade coming soon...
-      While your here fell free to check out my conduit fill application.
-      <a href="http://seancampbellnatac.com/conduit-fill/">Here</a>
+      <p>Under Construction</p>
+      <p>Electrical Apps by me, an electrical apprentice</p>
+      <a href="https://seancampbellnatac.com/conduit-fill/">Conduit Fill - 2015 CodeBook</a>
+      <a href="https://seancampbellnatac.com/voltage-drop/">Voltage Drop - 2015 CodeBook</a>
       <Footer appName={appName} />
     </div>
   );
