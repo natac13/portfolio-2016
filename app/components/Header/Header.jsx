@@ -7,7 +7,7 @@ function Header(props) {
 
   return (
     <header className={style.wrapper}>
-      <h1 className={style.title}>{appName}</h1>
+      <h1 className={style.title}>Sean Campbell's {appName}</h1>
     </header>
   );
 }
