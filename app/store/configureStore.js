@@ -9,10 +9,11 @@ import rootReducer from '../reducers/';
 import logger from 'redux-logger';
 import promiseMiddleware from 'redux-promise';
 import { routerMiddleware } from 'react-router-redux';
+import apiMiddleware from '../middleware/api.js';
 
 const loggerMiddleware = logger();
 const router = routerMiddleware(browserHistory);
-const middlewares = [router, promiseMiddleware];
+const middlewares = [router, promiseMiddleware, apiMiddleware];
 if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') {
   middlewares.push(loggerMiddleware); // no need for logging in production...
 }

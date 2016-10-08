@@ -20,7 +20,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "lint": "eslint app/",
-    "start-production": "pm2 start build/production.server.bundle.js",
+    "start-production": "pm2 start -i 2 --name='portfolio' build/production.server.bundle.js",
     "start:demo": "cross-env NODE_ENV=production node -r dotenv/config build/production.server.bundle.js"
   },
   "repository": {
@@ -85,6 +85,7 @@
     "modularscale-sass": "2.1.1",
     "mongoose": "4.4.14",
     "morgan": "1.7.0",
+    "nodemailer": "2.6.4",
     "path": "0.12.7",
     "ramda": "0.21.0",
     "react": "15.0.1",
@@ -105,6 +106,7 @@
     "redux-localstorage": "0.4.0",
     "redux-logger": "2.6.1",
     "redux-promise": "0.5.3",
-    "webpack": "1.13.0"
+    "webpack": "1.13.0",
+    "xoauth2": "1.2.0"
   }
 }
