@@ -6,8 +6,8 @@ import * as ActionCreators from '../../actions';
 import { pure, compose } from 'recompose';
 
 function App(props) {
-  // const { api, form, routing, actions, appName } = props;
-  // console.log(props);
+  // const { routing, actions, appName } = props;
+  console.log(props);
   const childrenWithStoreProp = React.Children.map(
     props.children,
     (child) => React.cloneElement(child, { ...props })
@@ -20,7 +20,6 @@ function App(props) {
 }
 
 App.propTypes = {
-  api: ImmutablePropTypes.map.isRequired,
   form: ImmutablePropTypes.map.isRequired,
   routing: ImmutablePropTypes.map.isRequired,
   actions: PropTypes.object.isRequired,
@@ -33,7 +32,7 @@ function mapStateToProps(state) {
     appName: 'Portfolio',
     form: state.get('form'),
     routing: state.get('routing'),
-    api: state.get('api'),
+    display: state.get('display'),
   };
 }
 
