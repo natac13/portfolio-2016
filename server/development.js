@@ -6,6 +6,7 @@ import connectToDB from './dbConnection.js';
 
 
 import errorHandler from './routes/errorHandler.js';
+import mailRouter from './routes/mailer.js';
 
 /** Webpack imports ***/
 import webpack from 'webpack';
@@ -49,9 +50,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Routes
 app.get('/favicon.ico', (req, res) => console.log('stopit'));
+app.use('/feedback', mailRouter);
 
 // base route
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../index.html'));
 });
 

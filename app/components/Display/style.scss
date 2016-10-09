@@ -1,0 +1,104 @@
+.dialog {
+  width: 85vw;
+  height: 75vh;
+  font-family: $roboto-font-stack;
+
+  @media (min-width:20em) {
+    /* smartphones, iPhone, portrait 480x320 phones */
+
+  }
+  @media (min-width:30.063em) {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    width: 50vw;
+
+  }
+  @media (min-width:40.063em) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  }
+  @media (min-width:60.063em) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    width: 40vw
+  }
+  @media (min-width:64.063em) {
+    /* big landscape tablets, laptops, and desktops */
+
+  }
+  @media (min-width:80.063em) {
+    /* hi-res laptops and desktops */
+
+  }
+
+  section {
+    padding: 0 0.5em;
+
+    h6 {
+      margin: 1em 0;
+      font-weight: 700;
+      font-size: ms(1);
+      text-align: center;
+      color: $primary-color;
+      text-transform: uppercase;
+      letter-spacing: -0.015em;
+      text-shadow: 0 0.5px 0 #000;
+      font-family: $oswald;
+    }
+
+  }
+
+  nav {
+
+    @media (min-width:20em) {
+      /* smartphones, iPhone, portrait 480x320 phones */
+
+    }
+    @media (min-width:30.063em) {
+      /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+    }
+    @media (min-width:40.063em) {
+      /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+
+    }
+    @media (min-width:60.063em) {
+      /* tablet, landscape iPad, lo-res laptops ands desktops */
+    }
+    @media (min-width:64.063em) {
+      /* big landscape tablets, laptops, and desktops */
+
+    }
+    @media (min-width:80.063em) {
+      /* hi-res laptops and desktops */
+
+    }
+  }
+}
+
+.done {
+  background-color: $secondary-color;
+}
+
+
+
+.message {
+  background-color: $background;
+  font-size: ms(0);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 -7px 13px -2px $primary-color,
+              0 -8px 5px -2px $secondary-color;
+
+  .short {
+    font-size: ms(1);
+    margin: 0.1em;
+    background: $offWhite;
+    color: $primary-color;
+    padding: 0.1em 0.15em;
+    box-shadow: 0 2px 5px 1px $contrast;
+  }
+
+}
+
+
+
