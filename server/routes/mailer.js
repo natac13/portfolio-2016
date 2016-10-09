@@ -14,6 +14,7 @@ function userResponse(success, subject) {
       success: false,
       type: 'emailError',
       message: 'There was an issue sending your email. This is a problem with the website.',
+      subject,
     };
   }
   return {
@@ -38,7 +39,7 @@ router.route('/')
     mailgun.messages().send(emailOptions, (err, body) => {
       if (err) {
         console.log(err);
-        return res.json(userResponse(false));
+        return res.json(userResponse(false, err));
       }
       return res.json(userResponse(true, subject));
     });

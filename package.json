@@ -1,6 +1,6 @@
 {
   "name": "portfolio-2016-natac",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "My 2016 portfolio page",
   "main": "server/development.js",
   "directories": {
