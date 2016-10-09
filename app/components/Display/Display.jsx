@@ -15,6 +15,8 @@ function Display(props) {
   const error = display.get('error');
   const emailSent = display.get('emailSent');
   const emailSentMessage = display.get('emailSentMessage');
+  console.log('error message');
+  console.log(error);
 
 
   return (
