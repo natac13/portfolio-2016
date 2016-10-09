@@ -15,8 +15,6 @@ function Display(props) {
   const error = display.get('error');
   const emailSent = display.get('emailSent');
   const emailSentMessage = display.get('emailSentMessage');
-  console.log('error message');
-  console.log(error);
 
 
   return (
@@ -30,7 +28,7 @@ function Display(props) {
     >
       <div className={style.message}>
         {!!error ?
-          <p className={style.short}>{error}</p> :
+          <p className={style.short}>There was an error...</p> :
           <p className={style.short}>{emailSentMessage}</p>
         }
       </div>

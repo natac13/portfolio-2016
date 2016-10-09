@@ -19,13 +19,8 @@ export default ({ dispatch, getState }) => (next) => (action) => {
 
   if (type === SEND_EMAIL) {
     return axios.post('/feedback', payload)
-      .then((res) => {
-        if (!res.data.success) {
-          return next(setError(res.data.subject));
-        }
-        return next(emailSent(res.data));
-      })
-      .catch((error) => next(setError(error.data.message)));
+      .then((res) => next(emailSent(res.data)))
+      .catch((error) => next(setError(error)));
   }
 
   return next(action);
