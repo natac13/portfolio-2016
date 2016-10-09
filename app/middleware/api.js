@@ -19,7 +19,7 @@ export default ({ dispatch, getState }) => (next) => (action) => {
 
   if (type === SEND_EMAIL) {
     return axios.post('/feedback', payload)
-      .then((res) => next(emailSent(res.data.message)))
+      .then((res) => next(emailSent(res.data)))
       .catch((error) => next(setError(error.data.message)));
   }
 

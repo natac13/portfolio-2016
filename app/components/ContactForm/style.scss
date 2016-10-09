@@ -6,7 +6,7 @@
   flex-flow: column;
   align-items: center;
   width: 95vw;
-  height: 65vh;
+  height: auto;
   box-shadow: 0 0 40px -10px darken($background, 80);
   padding: 0.3em;
 
@@ -16,7 +16,8 @@
   }
   @media (min-width:30.063em) {
     /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-    width: 75vw
+    width: 75vw;
+    margin: auto;
   }
   @media (min-width:40.063em) {
     /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */

@@ -9,6 +9,7 @@ const initalState = Map({
   error: undefined, // undefined or message to user.
   emailSent: false,
   emailSentMessage: undefined,
+  subject: undefined,
 });
 
 function displayError(state, error) {
@@ -17,10 +18,11 @@ function displayError(state, error) {
   return tempState;
 }
 
-function emailSent(state, message) {
+function emailSent(state, data) {
   let tempState = state;
   tempState = tempState.set('emailSent', true);
-  tempState = tempState.set('emailSentMessage', message);
+  tempState = tempState.set('emailSentMessage', data.message);
+  tempState = tempState.set('subject', data.subject);
   return tempState;
 }
 

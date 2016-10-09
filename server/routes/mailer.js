@@ -8,7 +8,7 @@ const domain = process.env.MAILGUN_DOMAIN;
 const toEmail = process.env.EMAIL;
 
 
-function userResponse(success) {
+function userResponse(success, subject) {
   if (!success) {
     return {
       success: false,
@@ -19,6 +19,7 @@ function userResponse(success) {
   return {
     success: true,
     message: 'Email sent successfully, thank you for your feedback!',
+    subject,
   };
 }
 
@@ -38,7 +39,7 @@ router.route('/')
       if (err) {
         return res.json(userResponse(false));
       }
-      return res.json(userResponse(true));
+      return res.json(userResponse(true, subject));
     });
   });
 

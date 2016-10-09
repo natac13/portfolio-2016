@@ -6,6 +6,8 @@ import Footer from '../Footer/';
 import ContactForm from '../ContactForm/';
 import Display from '../Display/';
 
+import kebabCase from 'lodash/kebabCase';
+
 import style from './style.scss';
 
 function Contact(props) {
@@ -13,7 +15,8 @@ function Contact(props) {
 
   const closeDisplay = () => {
     actions.closeDisplay();
-    actions.push('/');
+    // actions.push('/');
+    window.location.href = `https://seancampbellnatac.com/${kebabCase(display.get('subject'))}`;
   };
 
   return (
@@ -30,6 +33,7 @@ Contact.propTypes = {
   appName: PropTypes.string,
   actions: PropTypes.object,
   display: ImmutablePropTypes.map,
+  location: PropTypes.object,
 };
 
 export default Contact;
