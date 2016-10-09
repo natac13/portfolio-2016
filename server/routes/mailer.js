@@ -37,6 +37,7 @@ router.route('/')
 
     mailgun.messages().send(emailOptions, (err, body) => {
       if (err) {
+        console.log(err);
         return res.json(userResponse(false));
       }
       return res.json(userResponse(true, subject));
