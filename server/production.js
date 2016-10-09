@@ -5,18 +5,16 @@ import compression from 'compression';
 import fs from 'fs';
 import morgan from 'morgan';
 
-import connectToDB from './dbConnection.js';
 
 import errorHandler from './routes/errorHandler.js';
+import mailRouter from './routes/mailer.js';
 
 require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 8080;
-const env = process.env.NODE_ENV;
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' });
 
-// connect to DB
-// connectToDB(env, process.env.MONGO_URI);
+
 app.use(morgan('combined', { stream: accessLogStream }));
 app.use(compression());
 // body-parser
@@ -28,7 +26,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '../build')));
 
 // Routes
+app.use('/feedback', mailRouter);
 app.use(errorHandler);
+
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}...`);
