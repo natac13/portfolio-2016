@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import ImmutablePropTypes from 'react-immutable-proptypes';
 import compose from 'recompose/compose';
 import withProps from 'recompose/withProps';
 import { reduxForm } from 'redux-form';
@@ -36,6 +35,8 @@ const initialValues = {
   userEmail: '',
 };
 
+import style from './style.scss';
+
 function ContactForm(props) {
   const {
     fields: { comments, userEmail, subject },
@@ -57,22 +58,46 @@ function ContactForm(props) {
 
   const softReset = () => resetForm();
 
+  const formClass = classnames({
+    [style.form]: true,
+  });
+
+  const sendButton = classnames({
+    [style.button]: true,
+    [style.sendButton]: true,
+  });
+
+  const clearButton = classnames({
+    [style.button]: true,
+    [style.clearButton]: true,
+  });
+
+  const commentsClass = classnames({
+    [style.input]: true,
+    [style.comments]: true,
+  });
+
   return (
     <div>
-      <form role="form" onSubmit={handleSubmit(onSubmit(actions))}>
+      <form
+        className={formClass}
+        onSubmit={handleSubmit(onSubmit(actions))}
+      >
         <TooltipInput
+          className={style.input}
           type="email"
           name="userEmail"
           label="Your Email"
           required
           allowBlank
-          hint="yourEmail@provider.com"
+          hint="yourEmail@gmail.com"
           disabled={submitting}
           {...userEmail}
           tooltip="Enter your Email for a response."
           tooltipDelay={TOOLTIP_DELAY}
         />
         <TooltipDropdown
+          className={style.dropdown}
           label="Electrical Application"
           name="subject"
           allowBlank
@@ -84,6 +109,7 @@ function ContactForm(props) {
           tooltipDelay={TOOLTIP_DELAY}
         />
         <TooltipInput
+          className={commentsClass}
           type="text"
           name="comments"
           label="Comments"
@@ -95,24 +121,28 @@ function ContactForm(props) {
           tooltip="Your thoughts on the electrical appliation..."
           tooltipDelay={TOOLTIP_DELAY}
         />
-        <TooltipButton
-          type="submit"
-          label="Send"
-          icon={<Icon name="paper-plane-o" />}
-          primary
-          disabled={submitting}
-          tooltip="Send email to Sean Campbell"
-          tooltipDelay={TOOLTIP_DELAY}
-        />
-        <TooltipButton
-          type="button"
-          label="Clear"
-          icon={<Icon name="trash-o" />}
-          disabled={submitting}
-          onClick={hardReset}
-          tooltip="Reset contact form"
-          tooltipDelay={TOOLTIP_DELAY}
-        />
+        <footer className={style.controls}>
+          <TooltipButton
+            className={sendButton}
+            type="submit"
+            label="Send"
+            icon={submitting ? <Icon spin name="cog" /> : <Icon name="paper-plane-o" /> }
+            primary
+            disabled={submitting}
+            tooltip="Send email to Sean Campbell"
+            tooltipDelay={TOOLTIP_DELAY}
+          />
+          <TooltipButton
+            className={clearButton}
+            type="button"
+            label="Clear"
+            icon={<Icon name="trash-o" />}
+            disabled={submitting}
+            onClick={hardReset}
+            tooltip="Reset contact form"
+            tooltipDelay={TOOLTIP_DELAY}
+          />
+        </footer>
       </form>
     </div>
   );
@@ -132,11 +162,9 @@ ContactForm.propTypes = {
 const onSubmit = (actions) => (values) => {
   return new Promise((resolve, reject) => {
     // dispatch action to call to middleware.
-    console.log(values);
-    console.log(actions);
     const { userEmail, subject, comments } = values;
-    actions.sendEmail(userEmail, subject, comments)
-    return resolve();
+    actions.sendEmail(userEmail, subject, comments);
+    return setTimeout(() => resolve(), 1250);
   });
 };
 

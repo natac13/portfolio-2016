@@ -53,7 +53,7 @@ app.get('/favicon.ico', (req, res) => console.log('stopit'));
 app.use('/feedback', mailRouter);
 
 // base route
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../index.html'));
 });
 

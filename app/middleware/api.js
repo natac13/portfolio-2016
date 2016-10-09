@@ -1,4 +1,3 @@
-import R from 'ramda';
 import axios from 'axios';
 import { setError, emailSent } from '../actions/';
 import { SEND_EMAIL } from '../constants/';
@@ -19,10 +18,9 @@ export default ({ dispatch, getState }) => (next) => (action) => {
   const { type, payload } = callAPI;
 
   if (type === SEND_EMAIL) {
-    console.log(payload);
     return axios.post('/feedback', payload)
-      .then((res) => emailSent(res))
-      .catch((error) => setError(error));
+      .then((res) => next(emailSent(res.data.message)))
+      .catch((error) => next(setError(error.data.message)));
   }
 
   return next(action);

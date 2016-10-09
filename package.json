@@ -82,10 +82,10 @@
     "history": "2.0.2",
     "immutable": "3.8.0",
     "lodash": "4.14.1",
+    "mailgun-js": "0.7.12",
     "modularscale-sass": "2.1.1",
     "mongoose": "4.4.14",
     "morgan": "1.7.0",
-    "nodemailer": "2.6.4",
     "path": "0.12.7",
     "ramda": "0.21.0",
     "react": "15.0.1",
@@ -106,7 +106,6 @@
     "redux-localstorage": "0.4.0",
     "redux-logger": "2.6.1",
     "redux-promise": "0.5.3",
-    "webpack": "1.13.0",
-    "xoauth2": "1.2.0"
+    "webpack": "1.13.0"
   }
 }

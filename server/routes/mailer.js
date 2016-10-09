@@ -1,60 +1,44 @@
 import express from 'express';
-import nodemailer from 'nodemailer';
-import xoauth2 from 'xoauth2';
-
-import config from '../mailConfig.js';
+import Mailgun from 'mailgun-js';
 
 const router = express.Router();
 
-function userResponse(success, response) {
+const apiKey = process.env.MAILGUN_API_KEY;
+const domain = process.env.MAILGUN_DOMAIN;
+const toEmail = process.env.EMAIL;
+
+
+function userResponse(success) {
   if (!success) {
     return {
       success: false,
       type: 'emailError',
       message: 'There was an issue sending your email. This is a problem with the website.',
-      ...response,
     };
   }
   return {
     success: true,
-    message: 'Email sent successfully, thank you for your input ',
-    ...response,
+    message: 'Email sent successfully, thank you for your feedback!',
   };
 }
 
 
 router.route('/')
   .post(async function(req, res, next) {
-    const { subject, comments } = req.body;
-
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        xoauth2: xoauth2.createXOAuth2Generator({
-          user: config.user,
-          clientID: config.clientID,
-          clientSecret: config.clientSecret,
-          refreshToken: config.refreshToken,
-          accessToken: config.accessToken,
-        }),
-      },
-    });
-
-    const mailOptions = {
-      from: config.user,
-      to: config.user,
+    const { subject, comments, userEmail } = req.body;
+    const mailgun = new Mailgun({ apiKey, domain });
+    const emailOptions = {
+      from: userEmail,
+      to: toEmail,
       subject,
       text: comments,
     };
 
-    transporter.sendMail(mailOptions, (error, response) => {
-      if (error) {
-        console.log(error);
-        return res.json(userResponse(false, error));
+    mailgun.messages().send(emailOptions, (err, body) => {
+      if (err) {
+        return res.json(userResponse(false));
       }
-      transporter.close();
-      console.log(response)
-      return res.json(userResponse(true, response));
+      return res.json(userResponse(true));
     });
   });
 

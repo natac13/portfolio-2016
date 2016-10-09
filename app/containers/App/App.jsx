@@ -6,7 +6,7 @@ import * as ActionCreators from '../../actions';
 import { pure, compose } from 'recompose';
 
 function App(props) {
-  // const { api, form, routing, actions, appName } = props;
+  // const { routing, actions, appName } = props;
   console.log(props);
   const childrenWithStoreProp = React.Children.map(
     props.children,
@@ -32,6 +32,7 @@ function mapStateToProps(state) {
     appName: 'Portfolio',
     form: state.get('form'),
     routing: state.get('routing'),
+    display: state.get('display'),
   };
 }
 
