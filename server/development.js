@@ -6,7 +6,7 @@ import connectToDB from './dbConnection.js';
 
 
 import errorHandler from './routes/errorHandler.js';
-import mailRouter from './routes/mailer.js';
+import mailRouter from './routes/feedback.js';
 
 /** Webpack imports ***/
 import webpack from 'webpack';

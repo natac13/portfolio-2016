@@ -7,7 +7,7 @@ import morgan from 'morgan';
 
 
 import errorHandler from './routes/errorHandler.js';
-import mailRouter from './routes/mailer.js';
+import mailRouter from './routes/feedback.js';
 
 require('dotenv').config();
 const app = express();
