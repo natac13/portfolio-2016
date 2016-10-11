@@ -29,6 +29,10 @@ app.use(express.static(path.join(__dirname, '../build')));
 app.use('/feedback', mailRouter);
 app.use(errorHandler);
 
+app.get('/*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../build/index.html'));
+});
+
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}...`);
