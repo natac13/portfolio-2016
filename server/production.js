@@ -34,6 +34,6 @@ app.get('/*', (req, res) => {
 });
 
 
-app.listen(port, () => {
+app.listen(port, process.env.SERVER_IP, () => {
   console.log(`Listening on port ${port}...`);
 });
