@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // server static files
 // will server the static index.html page in production as well.
-// app.use(express.static(path.join(__dirname, '../build')));
+app.use(express.static(path.join(__dirname, '../build')));
 
 // Routes
 app.use('/feedback', mailRouter);
