@@ -1,0 +1,19 @@
+.socialLink {
+  width: auto;
+  margin: 0;
+  padding: 0 .5em;
+  background: rgba($header-color, .3) !important;
+  color: #bbb;
+  transition: color .5s ease-in,
+              background .5s ease-in !important;
+
+  @media only screen and (max-width: 699px) {
+    padding: .25em .5em;
+    margin: 0 .5em;
+  }
+}
+
+.socialLink:hover {
+  color: #333;
+  background: rgba($header-color, .8) !important;
+}
