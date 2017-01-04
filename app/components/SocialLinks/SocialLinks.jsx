@@ -8,7 +8,7 @@ import { Icon } from 'react-fa';
 
 const TooltipButton = tooltip(Button);
 // const TooltipIconButton = tooltip(IconButton);
-const TOOLTIP_DELAY = 550;
+const TOOLTIP_DELAY = 1050;
 
 function SocialLinks(props) {
 

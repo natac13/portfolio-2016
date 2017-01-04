@@ -11,4 +11,8 @@ $s-test: #71C463;
 $primary-accent: #287D7D;
 $secondary-accent: #C6E070;
 $offWhite: #F8F8F8;
-$background: #F8F8F8;
+$background: $offWhite;
+
+// old variable
+$header-color: #B38535;
+$header-dark: darken($header-color, 35%);

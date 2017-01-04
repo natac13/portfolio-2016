@@ -12,7 +12,7 @@ function Header(props) {
       <img className={style.background} src={img} />
       {!!pathname ?
         <h1 className={style.title}>Contact Sean Campbell</h1> :
-        <h1 className={style.title}>Sean Campbell's {appName}</h1>
+        <h1 className={style.title}>Sean Campbell</h1>
       }
       <SocialLinks />
     </header>
