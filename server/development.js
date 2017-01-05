@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path';
 import bodyParser from 'body-parser';
+import favicon from 'serve-favicon';
 
 import connectToDB from './dbConnection.js';
 
@@ -49,7 +50,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(express.static(path.join(__dirname, '../assets')));
 
 // Routes
-app.get('/favicon.ico', (req, res) => console.log('stopit'));
+// app.get('/favicon.ico', (req, res) => console.log('stopit'));
+app.use(favicon(path.resolve(__dirname, '../favicon.ico')));
 app.use('/feedback', mailRouter);
 
 // base route
