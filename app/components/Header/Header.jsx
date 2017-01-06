@@ -6,12 +6,10 @@ import img from './main_background.jpg';
 import capitalize from 'lodash/fp/capitalize';
 import { slice } from 'ramda';
 
-import Navigation from '../Navigation/';
-
 import style from './style.scss';
 
 function Header(props) {
-  const { pathname, navigation, actions } = props;
+  const { pathname } = props;
   const cleanedPathname = slice(1, 10)(capitalize(pathname));
 
   return (

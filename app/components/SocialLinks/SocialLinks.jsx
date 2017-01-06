@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import style from './style.scss';
 
+import classnames from 'classnames';
+
 import { Button } from 'react-toolbox/lib/button';
 // import { Button, IconButton } from 'react-toolbox/lib/button';
 import tooltip from 'react-toolbox/lib/tooltip';
@@ -11,9 +13,13 @@ const TooltipButton = tooltip(Button);
 const TOOLTIP_DELAY = 1050;
 
 function SocialLinks(props) {
+  const wrapperClass = classnames({
+    [style.nav]: true,
+    [props.classname]: !!props.classname,
+  });
 
   return (
-    <section className={style.nav}>
+    <section className={wrapperClass}>
       <TooltipButton
         className={style.socialLink}
         label="LinkedIn"
@@ -49,7 +55,7 @@ function SocialLinks(props) {
 }
 
 SocialLinks.propTypes = {
-
+  classname: PropTypes.string,
 };
 
 export default SocialLinks;
