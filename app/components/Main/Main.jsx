@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 
 import Header from '../Header';
 import Footer from '../Footer/';
-import SocialLinks from '../SocialLinks/';
 import About from '../About/';
 
 
@@ -13,7 +12,6 @@ function Main(props) {
   return (
     <div className={style.wrapper}>
       <Header {...props} />
-      <SocialLinks classname={style.socialLinks} />
       <section className={style.main}>
         <About />
         <p>Electrical Apps by me, an electrical apprentice</p>

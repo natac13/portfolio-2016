@@ -6,89 +6,123 @@ import Drawer from 'react-toolbox/lib/drawer';
 import { Button, IconButton } from 'react-toolbox/lib/button';
 import { Icon } from 'react-fa';
 
+import { animateScroll as scroll, Element, scroller } from 'react-scroll';
+
 import style from './style.scss';
 
 function Navigation(props) {
-  const { navigation, actions } = props;
-  console.log(props)
-  const navClass = classnames({
+  const { navigation, actions, pathname } = props;
+  console.log(props);
+
+  const navBtnClass = classnames({
+    [style.navBtn]: true,
     'hamburger': true,
     'hamburger--emphatic': true,
     'is-active': navigation.get('open'),
   });
+  const hambugerInnerClass = classnames({
+    'hamburger-inner': true,
+    [style.hamburgerInner]: !navigation.get('open'),
+    [style.hamburgerInner2]: navigation.get('open'),
+  });
+
+  const scrollOption = {
+    duration: 1000,
+    delay: 300,
+    smooth: true,
+    offset: 50,
+    isDynamic: true,
+  };
+
   return (
     <div>
-      <button className={navClass} type="button" onClick={actions.toggleNav}>
+      <button className={navBtnClass} type="button" onClick={actions.toggleNav}>
         <span className="hamburger-box">
-          <span className="hamburger-inner"></span>
+          <span className={hambugerInnerClass}></span>
         </span>
       </button>
       <Drawer
         active={navigation.get('open')}
         onOverlayClick={actions.toggleNav}
         type="right"
+        className={style.drawer}
       >
         <Button
-          className={style.navBtn}
-          label="Home / About"
+          className={style.navLink}
+          label="Home"
           flat
+          primary
           icon={<Icon name="home" />}
-          neutral={false}
           onClick={() => {
             actions.toggleNav();
+            scroll.scrollToTop(scrollOption);
             return actions.pageChange();
           }}
         />
+        {pathname === '/' ?
+          <Button
+            className={style.navLink}
+            label="About"
+            flat
+            primary
+            icon={<Icon name="info-circle" />}
+            onClick={() => {
+              actions.toggleNav();
+              return scroller.scrollTo('about', scrollOption);
+            }}
+          /> :
+          null
+        }
         <Button
-          className={style.navBtn}
+          className={style.navLink}
           label="JavaScript knowledge"
           flat
+          primary
           icon={<Icon name="code" />}
-          neutral={false}
           onClick={() => {
             actions.toggleNav();
             return actions.pageChange('javascriptKnowledge');
           }}
         />
         <Button
-          className={style.navBtn}
+          className={style.navLink}
           label="PLC Knowledge"
           flat
+          primary
           icon={<Icon name="list-alt" />}
-          neutral={false}
           onClick={() => {
             actions.toggleNav();
             return actions.pageChange('plcKnowledge');
           }}
         />
         <Button
-          className={style.navBtn}
+          className={style.navLink}
           label="Electrical Knowledge"
           flat
+          primary
           icon={<Icon name="bolt" />}
-          neutral={false}
           onClick={() => {
             actions.toggleNav();
             return actions.pageChange('electricalKnowledge');
           }}
         />
         <Button
-          className={style.navBtn}
+          className={style.navLink}
           label="Reading List"
           flat
+          primary
           icon={<Icon name="book" />}
-          neutral={false}
           onClick={() => {
             actions.toggleNav();
             return actions.pageChange('readingList');
           }}
         />
         <Button
-          className={style.navBtn}
+          className={style.navLink}
           label="Contact"
           flat
+          primary
           icon={<Icon name="envelope" />}
-          neutral={false}
           onClick={() => {
             actions.toggleNav();
             return actions.pageChange('contact');

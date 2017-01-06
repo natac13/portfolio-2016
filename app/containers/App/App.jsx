@@ -6,8 +6,6 @@ import * as ActionCreators from '../../actions';
 import { pure, compose } from 'recompose';
 import Navigation from '../../components/Navigation/';
 
-
-
 function App(props) {
   // const { routing, actions, appName } = props;
   console.log(props);
@@ -17,7 +15,7 @@ function App(props) {
   );
   return (
     <div>
-      <Navigation navigation={props.navigation} actions={props.actions} />
+      <Navigation navigation={props.navigation} actions={props.actions} pathname={props.location.pathname} />
       {childrenWithStoreProp}
     </div>
   );
