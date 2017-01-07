@@ -6,7 +6,7 @@ import Drawer from 'react-toolbox/lib/drawer';
 import { Button, IconButton } from 'react-toolbox/lib/button';
 import { Icon } from 'react-fa';
 
-import { animateScroll as scroll, Element, scroller } from 'react-scroll';
+import { scrollTo, scrollTop } from '../../utils/scroller.js';
 
 import style from './style.scss';
 
@@ -25,14 +25,6 @@ function Navigation(props) {
     [style.hamburgerInner]: !navigation.get('open'),
     [style.hamburgerInner2]: navigation.get('open'),
   });
-
-  const scrollOption = {
-    duration: 1000,
-    delay: 300,
-    smooth: true,
-    offset: 50,
-    isDynamic: true,
-  };
 
   return (
     <div>
@@ -55,7 +47,7 @@ function Navigation(props) {
           icon={<Icon name="home" />}
           onClick={() => {
             actions.toggleNav();
-            scroll.scrollToTop(scrollOption);
+            scrollTop();
             return actions.pageChange();
           }}
         />
@@ -68,20 +60,30 @@ function Navigation(props) {
             icon={<Icon name="info-circle" />}
             onClick={() => {
               actions.toggleNav();
-              return scroller.scrollTo('about', scrollOption);
+              return scrollTo('about');
             }}
           /> :
           null
         }
         <Button
           className={style.navLink}
-          label="JavaScript knowledge"
+          label="Blog"
+          flat
+          primary
+          icon={<Icon name="medium" />}
+          href="https://medium.com/@natac1311"
+          target="_blank"
+          onClick={actions.toggleNav}
+        />
+        <Button
+          className={style.navLink}
+          label="JavaScript Projects"
           flat
           primary
           icon={<Icon name="code" />}
           onClick={() => {
             actions.toggleNav();
-            return actions.pageChange('javascriptKnowledge');
+            return actions.pageChange('javascript_projects');
           }}
         />
         <Button

@@ -14,13 +14,12 @@
   }
   @media (min-width:40.063em) {
     /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 50%;
   }
   @media (min-width:60.063em) {
     /* tablet, landscape iPad, lo-res laptops ands desktops */
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
     width: 35%;
   }
   @media (min-width:64.063em) {

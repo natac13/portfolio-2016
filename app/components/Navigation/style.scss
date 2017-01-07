@@ -48,6 +48,10 @@
 }
 
 .navLink {
+  margin-bottom: .25em;
+  &:last-child {
+    margin-bottom: 0;
+  }
 
 
   @media (min-width:20em) {
@@ -60,14 +64,11 @@
   }
   @media (min-width:40.063em) {
     /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    margin-bottom: 1em;
 
   }
   @media (min-width:60.063em) {
     /* tablet, landscape iPad, lo-res laptops ands desktops */
-    margin-bottom: 1em;
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
   @media (min-width:64.063em) {
     /* big landscape tablets, laptops, and desktops */
@@ -88,6 +89,7 @@
     flex-flow: column;
     justify-content: center;
     align-itmes: center;
+    margin-top: 5em;
 
     @media (min-width:20em) {
       /* smartphones, iPhone, portrait 480x320 phones */
@@ -103,7 +105,6 @@
     }
     @media (min-width:60.063em) {
       /* tablet, landscape iPad, lo-res laptops ands desktops */
-      margin-top: 5em;
 
     }
     @media (min-width:64.063em) {

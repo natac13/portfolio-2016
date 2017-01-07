@@ -14,10 +14,10 @@ function Main(props) {
       <Header {...props} />
       <section className={style.main}>
         <About />
-        <p>Electrical Apps by me, an electrical apprentice</p>
+        {/*<p>Electrical Apps by me, an electrical apprentice</p>
         <a href="https://seancampbellnatac.com/conduit-fill/">Conduit Fill - 2015 CodeBook</a>
         <a href="https://seancampbellnatac.com/voltage-drop/">Voltage Drop - 2015 CodeBook</a>
-        <a href="#" onClick={() => actions.pageChange('contact')}>Contact Sean Campbell</a>
+        <a href="#" onClick={() => actions.pageChange('contact')}>Contact Sean Campbell</a>*/}
       </section>
       <Footer appName={appName} />
     </div>

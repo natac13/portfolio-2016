@@ -8,6 +8,7 @@ import connectToDB from './dbConnection.js';
 
 import errorHandler from './routes/errorHandler.js';
 import mailRouter from './routes/feedback.js';
+import javascriptProjects from './routes/javascriptProjects.js';
 
 /** Webpack imports ***/
 import webpack from 'webpack';
@@ -50,6 +51,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(express.static(path.join(__dirname, '../assets')));
 
 // Routes
+app.use('/api/javascript-projects', javascriptProjects);
 // app.get('/favicon.ico', (req, res) => console.log('stopit'));
 app.use(favicon(path.resolve(__dirname, '../favicon.ico')));
 app.use('/feedback', mailRouter);

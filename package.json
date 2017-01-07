@@ -21,7 +21,8 @@
     "deploy": "gh-pages -d build",
     "lint": "eslint app/",
     "start-production": "pm2 start -i 2 --name='portfolio' build/production.server.bundle.js",
-    "start:demo": "cross-env NODE_ENV=production node -r dotenv/config build/production.server.bundle.js"
+    "start:demo": "cross-env NODE_ENV=production node -r dotenv/config build/production.server.bundle.js",
+    "insertJavascriptProjects": "mongoimport --db portfolio --collection javascriptprojects --drop --jsonArray server/models/JavascriptProjects/JavascriptProjects.json"
   },
   "repository": {
     "type": "git",

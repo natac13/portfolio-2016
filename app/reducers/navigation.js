@@ -6,6 +6,7 @@ import {
 
 const initialState = Map({
   open: false,
+  pageTopBtn: false,
 });
 
 
