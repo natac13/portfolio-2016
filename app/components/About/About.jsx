@@ -26,7 +26,7 @@ function About(props) {
           <ul className={style.changesList}>
             <li className={style.changeItem}>Read and exercising daily!</li>
             <li className={style.changeItem}>Following a plant-based diet</li>
-            <li className={style.changeItem}>Giving up alcohol and smoking</li>
+            <li className={style.changeItem}>Quitting alcohol and smoking cold.</li>
             <li className={style.changeItem}>Dropping TV, and execessive connsumtion of products</li>
             <li className={style.changeItem}>Meditate when the urge arises</li>
             <li className={style.changeItem}>Finding happiness through my own thoughts</li>

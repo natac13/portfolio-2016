@@ -3,7 +3,7 @@ import ImmutablePropTypes from 'react-immutable-proptypes';
 
 import classnames from 'classnames';
 import Drawer from 'react-toolbox/lib/drawer';
-import { Button, IconButton } from 'react-toolbox/lib/button';
+import { Button } from 'react-toolbox/lib/button';
 import { Icon } from 'react-fa';
 
 import { scrollTo, scrollTop } from '../../utils/scroller.js';
@@ -41,7 +41,7 @@ function Navigation(props) {
       >
         <Button
           className={style.navLink}
-          label="Home"
+          label={pathname === '/' ? 'Home' : 'Home / About' }
           flat
           primary
           icon={<Icon name="home" />}
@@ -77,18 +77,18 @@ function Navigation(props) {
         />
         <Button
           className={style.navLink}
-          label="JavaScript Projects"
+          label="JavaScript Experience"
           flat
           primary
           icon={<Icon name="code" />}
           onClick={() => {
             actions.toggleNav();
-            return actions.pageChange('javascript_projects');
+            return actions.pageChange('javascript_experience');
           }}
         />
         <Button
           className={style.navLink}
-          label="PLC Knowledge"
+          label="PLC Experience"
           flat
           primary
           icon={<Icon name="list-alt" />}
@@ -99,13 +99,13 @@ function Navigation(props) {
         />
         <Button
           className={style.navLink}
-          label="Electrical Knowledge"
+          label="Electrical Experience"
           flat
           primary
           icon={<Icon name="bolt" />}
           onClick={() => {
             actions.toggleNav();
-            return actions.pageChange('electricalKnowledge');
+            return actions.pageChange('electrical_experience');
           }}
         />
         <Button
@@ -138,6 +138,7 @@ function Navigation(props) {
 Navigation.propTypes = {
   actions: PropTypes.object.isRequried,
   navigation: ImmutablePropTypes.map.isRequired,
+  pathname: PropTypes.string.isRequired,
 };
 
 export default Navigation;

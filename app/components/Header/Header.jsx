@@ -33,7 +33,6 @@ function Header(props) {
 
 Header.propTypes = {
   pathname: PropTypes.string,
-  actions: PropTypes.object.isRequried,
   navigation: ImmutablePropTypes.map.isRequired,
 };
 
