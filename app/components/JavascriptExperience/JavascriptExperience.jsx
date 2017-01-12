@@ -36,6 +36,7 @@ JavascriptExperience.propTypes = {
   buildComponentList: PropTypes.func.isRequired,
   projectList: PropTypes.array.isRequired,
   windowSize: ImmutablePropTypes.map.isRequired,
+  location: PropTypes.object,
 };
 
 export default withProps({ buildComponentList, projectList })(JavascriptExperience);

@@ -39,7 +39,8 @@
 
 .title {
   font-size: ms(2);
-  color: $secondary-color;
+  color: $primary-color;
+  text-shadow: 0 0 10px $secondary-color;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 1em;
