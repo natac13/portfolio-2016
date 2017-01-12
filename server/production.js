@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 import compression from 'compression';
 import fs from 'fs';
 import morgan from 'morgan';
+import favicon from 'serve-favicon';
 
 
 import errorHandler from './routes/errorHandler.js';
@@ -21,6 +22,7 @@ app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use(favicon(path.resolve(__dirname, '../favicon.ico')));
 // server static files
 // will server the static index.html page in production as well.
 app.use(express.static(path.join(__dirname, '../build')));

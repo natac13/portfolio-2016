@@ -18,6 +18,8 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import configureRoutes from './routes/configureRoutes.js';
 /** Global styles */
 import './stylesheets/setup.scss';
+import './stylesheets/hamburgers.css';
+import './stylesheets/normalize.css';
 
 
 import configureStore from './store/configureStore';

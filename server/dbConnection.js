@@ -5,7 +5,7 @@ async function connectToDB(env, mongoURI) {
   if (env === 'development' || env === 'test') {
     // connect to a development/test database
     try {
-      const connection = await mongoose.connect(`${mongoURI}-development`);
+      const connection = await mongoose.connect(`${mongoURI}`);
       console.log('Connected to the development Database');
       return connection;
     } catch (error) {

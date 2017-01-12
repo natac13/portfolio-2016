@@ -1,0 +1,63 @@
+[
+    {
+        "company": "Gordon Electric",
+        "project": "Nursing and Media Building at Western University",
+        "description": "First task at this project was finishing the roughing in of the office rooms on the upper floors, installing 1/2\" and 3/4\" conduit. After showing proficiency, I was moved with another 4th term apprentice to install the 4\" EMT conduit for data as well as the 24\" cable tray. All of which involved reading and interpreting blueprints, planning and working with other trades to work efficiently; ladder, scissor lift and various power tools; and a conduit bending for 4\" EMT! This piece of equipment is really challenging to work with.",
+        "term": "4th"
+    },
+    {
+        "company": "Conti Electric",
+        "project": "CAMI Assembly Plant, Weld Shop Addition",
+        "description": "Being an industrial car plant, for confidential reason I do not believe I can talk much about this projects, other than that I was there and worked safely; it was a weld shop project with robots and was mostly automated.",
+        "term": "3rd to 4th"
+    },
+    {
+        "company": "Roberts OnSite",
+        "project": "CAMI Assembly Plant, Summer Shutdown Work",
+        "description": "Maintenance shutdown work. Installed new lights, mounted on various surfaces and Uni-strut structures. Reworded equipment, ie sensors and control devices.",
+        "term": "3rd"
+    },
+    {
+        "company": "Procon Electric",
+        "project": "Rooftop Solar Farm Install",
+        "description": "A flat rooftop solar farm. Given a blueprint of the roof, installed the bases, bricks for weight, solar panels; connected each solar panel together; installed cable tray, ran the collector cables back to the inverter.",
+        "term": "3rd"
+    },
+    {
+        "company": "Eptcon Electric",
+        "project": "Wind Farm",
+        "description": "Started this job working with a journeyman installing the ground grid for the 18 bases of the towers on this project. This involved driving 8 ground rods around the base and running #6 AWG copper cable around the base, the upper base and connecting it all together at various points; plus connecting the ground cable to the re-bar that is encased in the concrete; done prior to the pour, which involves over 50 cement trucks! After completing that job I was moved to the road crew who were installing the 750-1000kcmil aluminum cables that carried the generated power back to the sub-station; which involves kilometers over cables along with splicing them together as the cable reels can only hold so much cable. Getting into this task was bliss. Working directly with a excavator, backhoe, trenching machine, sanding machine and a bulldozer the crew dug a 4 foot deep trench laid a layer of sand then laid the cables themselves which were bundles together by tie-wraps using a metal triangle connected to either the backhoe or excavator and moving in sync with the operator. At one point there was a someone not paying attention and as we were running to sets of cable they got crossed in the trench. This causes a heating problem and simply cannot happen. Therefore I was selected specifically by the excavator operator to work with to dig out the crossed cables without damaging them. Extreme concentration, awareness and a connection between me and the operator was needed from both of us; which we pulled off with no issues! The steady hand of the operator was a thing of beauty. I was very proud to have worked with the operator, my foreman and that crew. It was hard to leave this job.",
+        "term": "2nd to 3rd"
+    },
+    {
+        "company": "Trade Mark Electric",
+        "project": "CAMI Assembly Plant, paint carriage return line upgrade",
+        "description": "Worked on a upper mezzanine where the car frame carriages for the paint line get returned from assembly. Involved was installing new cable tray and reworking I/O wires for new limit switches and other sensing devices light photo reflectors. This was midnight work and Lock Out Tag Out was of extreme importance while working on the line at night.",
+        "term": "2nd"
+    },
+    {
+        "company": "Ozz Electric",
+        "project": "Brecia College at Western Residence",
+        "description": "A almost finished building when I got on site - due to apprentices going to school - left finishing work and clean up mostly. There was a bit of armoured cable(AC90) to run for some finial lights as well as install the receptacles and switches throughout the building.",
+        "term": "2nd"
+    },
+
+    {
+        "company": "Gordon Electric",
+        "project": "St. Thomas Psychological Hospital",
+        "description": "Seeing this hospital take shape was amazing. I got to the site pretty early in the process and was tasked with a journeyman to install cable tray, handle deliveries; further the use of hand signaling skills. I learned about a ton of the different fitting and hardware associated with my trade by being responsible for organization of the material.",
+        "term": "1st"
+    },
+    {
+        "company": "Gordon Electric",
+        "project": "Western University Hospital Generator Install",
+        "description": "Being the only apprentice I was tasked with the clean up of the site. Breaking down skids from all the electrical switch gear we lowered into the basement of the hospital; I learned hand signals and how to communicate with a vehicle operator Helped move through leverage and other trade knowledge techniques to position the heavy switch gear and transformers without powered equipment; we utilized heavy duty 'skates', toe jacks, pry bars, muscle power and brains. I worked with cable a cable feeder and tugger for the wire pulls from the generators themselves to the wall box (10 foot tall!) in the basement of the hospital. I was tasked with installing the ground bus bar around the basement so that we could bond all the switch gear, doors and any other metal equipment in the basement; learning how to cad-weld in the process.",
+        "term": "1st"
+    },
+        {
+        "company": "Lancor Electric",
+        "project": "NoFrills Grocery Store Woodstock On.",
+        "description": "My first job on a construction site. Got batteries and coffee for the other employees on site. Learned and listened as much as I could. Was able to help fish wire through pipe and see for the first time the construction of a building.",
+        "term": "1st"
+    }
+]

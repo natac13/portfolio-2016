@@ -1,6 +1,6 @@
 @import '~modularscale-sass/stylesheets/modular-scale';
-@import './app/stylesheets/variables';
-@import './app/stylesheets/colors';
+@import './variables';
+@import './colors';
 
 $color-primary: $primary-color !default;
 $color-primary-dark: darken($primary-color, 13%) !default;
@@ -19,3 +19,6 @@ $font-size-tiny: $unit !default;
 $font-size-small: 1.1 * $unit !default;
 $font-size-normal: $font-size !default;
 $font-size-big: 1.5 * $unit !default;
+
+
+

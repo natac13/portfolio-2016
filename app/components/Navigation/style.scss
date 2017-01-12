@@ -1,0 +1,122 @@
+
+.navBtn {
+  position: fixed;
+  top: .3em;
+  right: .3em;
+  z-index: 999;
+  background-color: rgba($offWhite, .65) !important;
+  border-radius: 2px;
+
+  .hamburgerInner {
+    &,
+    &::before,
+    &::after {
+      background-color: $primary-color !important;
+    }
+  }
+
+  .hamburgerInner2 {
+    &,
+    &::before,
+    &::after {
+      background-color: $primary-color !important;
+    }
+  }
+
+  @media (min-width:20em) {
+    /* smartphones, iPhone, portrait 480x320 phones */
+
+  }
+  @media (min-width:30.063em) {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+  }
+  @media (min-width:40.063em) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    top: 1em;
+    right: 1em;
+  }
+  @media (min-width:60.063em) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+  }
+  @media (min-width:64.063em) {
+    /* big landscape tablets, laptops, and desktops */
+
+  }
+  @media (min-width:80.063em) {
+    /* hi-res laptops and desktops */
+
+  }
+}
+
+.navLink {
+  margin-bottom: .25em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+
+  @media (min-width:20em) {
+    /* smartphones, iPhone, portrait 480x320 phones */
+
+  }
+  @media (min-width:30.063em) {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+  }
+  @media (min-width:40.063em) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    margin-bottom: 1em;
+
+  }
+  @media (min-width:60.063em) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+  }
+  @media (min-width:64.063em) {
+    /* big landscape tablets, laptops, and desktops */
+
+  }
+  @media (min-width:80.063em) {
+    /* hi-res laptops and desktops */
+
+  }
+
+}
+
+.drawer {
+  background-color: $offWhite;
+
+  aside {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-itmes: center;
+    margin-top: 5em;
+
+    @media (min-width:20em) {
+      /* smartphones, iPhone, portrait 480x320 phones */
+
+    }
+    @media (min-width:30.063em) {
+      /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+    }
+    @media (min-width:40.063em) {
+      /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+
+    }
+    @media (min-width:60.063em) {
+      /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+    }
+    @media (min-width:64.063em) {
+      /* big landscape tablets, laptops, and desktops */
+
+    }
+    @media (min-width:80.063em) {
+      /* hi-res laptops and desktops */
+
+    }
+  }
+}
