@@ -8,7 +8,7 @@ import classnames from 'classnames';
 
 import createMarkup from '../../../utils/createMarkup.js';
 
-import { Button } from 'react-toolbox/lib/button';
+import { Button, IconButton } from 'react-toolbox/lib/button';
 import Dialog from 'react-toolbox/lib/dialog';
 import { CardMedia } from 'react-toolbox/lib/card';
 
@@ -37,7 +37,10 @@ function JavascriptProject(props) {
   return (
   <div key={key} className={style.wrapper}>
       {width < 1280 &&
-        <h5 className={style.title}>{title}</h5>
+        <div className={style.projectHeader}>
+          <IconButton className={style.touchBtn} icon="touch_app" />
+          <h5 className={style.title}>{title}</h5>
+        </div>
       }
       <section>
         <CardMedia

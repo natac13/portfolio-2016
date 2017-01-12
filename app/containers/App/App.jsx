@@ -21,7 +21,11 @@ function App(props) {
   );
   return (
     <div>
-      <Navigation navigation={props.navigation} actions={props.actions} pathname={props.location.pathname} />
+      <Navigation
+        navigation={props.navigation}
+        actions={props.actions}
+        pathname={props.location.pathname}
+      />
       {childrenWithStoreProp}
     </div>
   );

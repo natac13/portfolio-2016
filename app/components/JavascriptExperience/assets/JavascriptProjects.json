@@ -1,6 +1,6 @@
 [
     {
-        "title": "Tic Tac Toe Game",
+        "title": "Tic Tac Toe",
         "codeURL": "https://github.com/natac13/Tic-Tac-Toe-Game",
         "demoURL": "http://natac13.github.io/Tic-Tac-Toe-Game/",
         "description": "Built with <a href='https://facebook.github.io/react/'>React</a> and <a href='https://github.com/rackt/redux'>Redux</a> which I find incredible to work with. The build process used Webpack to bundle everything up. This was my last project before I was able to the <a href='http://www.freecodecamp.com/natac13/front-end-certification'>Front-end Certificate</a> from Free Code Camp. The AI was the tricky part in the app. I found a <a href='http://stackoverflow.com/questions/125557/what-algorithm-for-a-tic-tac-toe-game-can-i-use-to-determine-the-best-move-for'>stackoverflow.com</a> answer which laid out 8 rules to follow to never lose at Tic Tac Toe. I turned these into <a href='https://github.com/natac13/Tic-Tac-Toe-Game/blob/gh-pages/app/utils/compTurn.js#L35-L42'>functions</a> (<a href='https://github.com/natac13/Tic-Tac-Toe-Game/tree/gh-pages/app/utils/AI'>defined here</a>) which will either return the square for the computer to occupy or false so that the next 'rule' function is called. I will admit these were changed a few times after sending the game out for testing in the local developer community. I was even fortunate to get a video from one of the testers showing me how he was able to beat the game. However as it stands none of original testers can beat my implementation. <em>Can you?</em>",
@@ -8,7 +8,7 @@
         "alt": "Tic Tac Toe Game"
     },
     {
-        "title": "Markdown Previewer",
+        "title": "Markdown Prev.",
         "codeURL": "https://github.com/natac13/Markdown-Previewer-React",
         "demoURL": "http://natac13.github.io/Markdown-Previewer-React/",
         "description": "Free Code Camp's first <a href='https://facebook.github.io/react/'>React</a> + <a href='http://sass-lang.com/'>Sass</a> application, as well as the tutorial project on the React site. A simple project to get introduced to React. However this was not my first. After leading about CSS modules and how to structure the components in there own folders, this project was a nice way to dive into those best practices. I was able to lead about using <a href='https://github.com/commitizen/cz-cli'>commitizen</a> to write better commits as well as getting more comfortable with a more solid workflow (deploying with <a href='https://github.com/tschaub/gh-pages'>gh-pages</a>, dev vs prod webpack config, etc).",

@@ -22,7 +22,7 @@
   @media (min-width:60.063em) {
     /* tablet, landscape iPad, lo-res laptops ands desktops */
     width: 50vw;
-    height: 20em;
+    height: 35em;
     margin-bottom: 0;
     box-shadow: none;
 
@@ -123,6 +123,23 @@
   }
 }
 
+.projectHeader {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-shadow: 0 0 6px $secondary-color;
+
+    span {
+      color: $primary-color;
+    }
+  }
+}
+
 .title {
   text-align: center;
   color: $primary-color;
@@ -169,6 +186,7 @@
 
   }
 }
+
 
 .controls {
   display: flex;
