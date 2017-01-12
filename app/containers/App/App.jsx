@@ -7,7 +7,13 @@ import { pure, compose } from 'recompose';
 import Navigation from '../../components/Navigation/';
 
 function App(props) {
-  // const { routing, actions, appName } = props;
+  const { actions } = props;
+  window.onresize = () => {
+    actions.resize({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  };
   console.log(props);
   const childrenWithStoreProp = React.Children.map(
     props.children,
@@ -28,6 +34,7 @@ App.propTypes = {
   appName: PropTypes.string.isRequired,
   navigation: ImmutablePropTypes.map.isRequired,
   children: PropTypes.object,
+  location: PropTypes.object.isRequired,
 };
 
 //  Redux Connection
@@ -38,6 +45,7 @@ function mapStateToProps(state) {
     routing: state.get('routing'),
     display: state.get('display'),
     navigation: state.get('navigation'),
+    windowSize: state.get('windowSize'),
   };
 }
 

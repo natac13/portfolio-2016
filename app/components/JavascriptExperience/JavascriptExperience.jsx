@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import ImmutablePropTypes from 'react-immutable-proptypes';
 import withProps from 'recompose/withProps';
 
 import buildComponentList from '../../utils/buildComponentList.js';
@@ -11,8 +12,9 @@ import style from './style.scss';
 
 
 function JavascriptExperience(props) {
-  const { buildComponentList, projectList } = props;
-  const projects = projectList.map(buildComponentList(JavascriptProject));
+  console.log(props);
+  const { buildComponentList, projectList, windowSize } = props;
+  const projects = projectList.map(buildComponentList(windowSize, JavascriptProject));
 
   return (
     <div className={style.wrapper}>
@@ -26,6 +28,7 @@ function JavascriptExperience(props) {
 JavascriptExperience.propTypes = {
   buildComponentList: PropTypes.func.isRequired,
   projectList: PropTypes.array.isRequired,
+  windowSize: ImmutablePropTypes.map.isRequired,
 };
 
 export default withProps({ buildComponentList, projectList })(JavascriptExperience);

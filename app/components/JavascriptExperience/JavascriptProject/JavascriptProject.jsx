@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import ImmutablePropTypes from 'react-immutable-proptypes';
 import withProps from 'recompose/withProps';
 import withReducer from 'recompose/withReducer';
 import compose from 'recompose/compose';
@@ -9,7 +10,7 @@ import createMarkup from '../../../utils/createMarkup.js';
 
 import { Button } from 'react-toolbox/lib/button';
 import Dialog from 'react-toolbox/lib/dialog';
-import { Card, CardMedia, CardTitle, CardActions } from 'react-toolbox/lib/card';
+import { CardMedia } from 'react-toolbox/lib/card';
 
 import style from './style.scss';
 
@@ -28,42 +29,50 @@ function JavascriptProject(props) {
     key,
     dispatch,
     desc,
+    windowSize,
   } = props;
+  const width = windowSize.get('width');
+
 
   return (
-  <div className={style.wrapper}>
-    <CardMedia
-      className={style.picture}
-      aspectRatio="wide"
-      image={require(`../assets/${image}`)}
-    />
-    <div className={style.overlay}>
-      <h5 className={style.title}>{title}</h5>
-      <div className={style.controls}>
-        {demoURL &&
-          <Button
-            className={style.control}
-            neutral={false}
-            label="Demo"
-            href={demoURL} target="_blank"
-          />
-        }
-        {codeURL &&
-          <Button
-            className={style.control}
-            neutral={false}
-            label="Code"
-            href={codeURL} target="_blank"
-          />
-        }
-        <Button
-          className={style.control}
-          neutral={false}
-          label="Info..."
-          onClick={() => dispatch({ type: OPEN_DESC }) }
+  <div key={key} className={style.wrapper}>
+      {width < 1280 &&
+        <h5 className={style.title}>{title}</h5>
+      }
+      <section>
+        <CardMedia
+          className={style.picture}
+          aspectRatio="wide"
+          image={require(`../assets/${image}`)}
         />
-      </div>
-    </div>
+        <div className={style.overlay}>
+          {width >= 1280 && <h5 className={style.overlayTitle}>{title}</h5>}
+          <div className={style.controls}>
+            {demoURL &&
+              <Button
+                className={style.control}
+                neutral={false}
+                label="Demo"
+                href={demoURL} target="_blank"
+              />
+            }
+            {codeURL &&
+              <Button
+                className={style.control}
+                neutral={false}
+                label="Code"
+                href={codeURL} target="_blank"
+              />
+            }
+            <Button
+              className={style.control}
+              neutral={false}
+              label="Info..."
+              onClick={() => dispatch({ type: OPEN_DESC }) }
+            />
+          </div>
+        </div>
+      </section>
     <Dialog
       actions={[{ label: 'Close', onClick: () => dispatch({ type: CLOSE_DESC }) }] }
       active={desc.get('showDesc')}
@@ -86,6 +95,10 @@ JavascriptProject.propTypes = {
   image: PropTypes.string,
   alt: PropTypes.string,
   createMarkup: PropTypes.func.isRequired,
+  windowSize: ImmutablePropTypes.map.isRequired,
+  key: PropTypes.number,
+  dispatch: PropTypes.func.isRequired,
+  desc: ImmutablePropTypes.map.isRequired,
 };
 
 
@@ -111,30 +124,3 @@ export default compose(
   withProps({ createMarkup })
 )(JavascriptProject);
 
-  // <div className={style.wrapper}>
-  //         <Card className={style.project} raised>
-  //         <CardMedia
-  //           aspectRatio="wide"
-  //           image={require(`../assets/${image}`)}
-  //           contentOverlay
-  //         />
-  //         <CardTitle
-  //           title={title}
-  //         />
-  //         <CardActions>
-  //           <Button label="Demo" href={demoURL} primary target="_blank" />
-  //           <Button label="Code" href={codeURL} primary target="_blank" />
-  //           <Button label="Info..." onClick={() => dispatch({ type: OPEN_DESC }) } />
-  //         </CardActions>
-  //       </Card>
-  //       <Dialog
-  //         actions={[{ label: 'Close', onClick: () => dispatch({ type: CLOSE_DESC }) }] }
-  //         active={desc.get('showDesc')}
-  //         title="Full Description"
-  //         onOverlayClick={() => dispatch({ type: CLOSE_DESC })}
-  //         onEscKeyDown={() => dispatch({ type: CLOSE_DESC })}
-  //         type="small"
-  //       >
-  //         <p className={style.description} dangerouslySetInnerHTML={createMarkup(description)} />
-  //       </Dialog>
-  // </div>

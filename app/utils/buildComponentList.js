@@ -1,9 +1,9 @@
 import React from 'react';
 import { curry } from 'ramda';
 
-function buildComponentList(component, data, index) {
+function buildComponentList(windowSize, component, data, index) {
   return (
-    React.createElement(component, { key: index, ...data })
+    React.createElement(component, { key: index, ...data, windowSize })
   );
 }
 

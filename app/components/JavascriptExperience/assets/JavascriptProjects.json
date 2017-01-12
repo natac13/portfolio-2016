@@ -16,7 +16,7 @@
         "alt": "Markdown Previewer"
     },
     {
-        "title": "Wikipedia Mock Search",
+        "title": "Wiki Search",
         "codeURL": "https://github.com/natac13/WikiSearch",
         "demoURL": "",
         "description": "This application is using Wikipedia's api system to do a search through their records. This was my first crack at a <a href='https://facebook.github.io/react/'>React.js</a> application. I was able to simplify my build process by learning <a href='https://webpack.github.io/'>Webpack</a>; which handled ES6 transpiling, as well as the JSX transformation. This app is running off a node back-end which allows me to run it on heroku. After getting introduced to Webpack via this project, I have now adapted it to run my entire build process. The config file is quite different from the streams and <code>.pipe()</code> commands used in <a href='http://gulpjs.com/'>gulp</a>, but it is a way that has me focused on writing code and not setting up the environment.",
@@ -40,7 +40,7 @@
         "alt": "Free Code Camp News"
     },
     {
-        "title": "TwitchTV Streaming App",
+        "title": "TwitchTV Online",
         "codeURL": "https://github.com/natac13/twitch-tv-app-fcc",
         "demoURL": "http://codepen.io/natac13/full/OyMVpo",
         "description": "A challenge from Free Code Camp's material is this TwitchTv streaming app. The goal here is to display to the user which streamer is online. This was the first time I wrote a program with <a href='https://angularjs.org/'>AngularJS</a>. I must say it was a dream once I got an understanding of AngularJS. Using the ng-repeat nicely cleans up a bulky HTML document. With this app I also explored the <a href='https://jqueryui.com/'>jQuery UI</a> library, which adds fun to use click events!",
@@ -72,7 +72,7 @@
         "alt": "Calculator"
     },
     {
-        "title": "Random Quote Machine",
+        "title": "Random Quote",
         "codeURL": "http://codepen.io/natac13/pen/vOPpjg",
         "demoURL": "http://codepen.io/natac13/full/vOPpjg",
         "description": "Free Code Camp's first project challenge! Looking back now after learning about APIs I realize that using a random quote API would have been more <span class='bold'>random</span> lol. However I can recall the sweat just pouring down my face as I looked a blank screen to somehow come up with my first app. To complete the project I made my own list of quotes and then had a random function which would could one and using <a href='https://jquery.com/'>jQuery</a> for the first time got that data into the DOM elements.",
