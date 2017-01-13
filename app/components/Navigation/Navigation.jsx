@@ -88,6 +88,17 @@ function Navigation(props) {
         />
         <Button
           className={style.navLink}
+          label="Tutoring - Electrical"
+          flat
+          primary
+          icon={<Icon name="graduation-cap" />}
+          onClick={() => {
+            actions.toggleNav();
+            return actions.pageChange('natacsvantagepoint');
+          }}
+        />
+        <Button
+          className={style.navLink}
           label="PLC Experience"
           flat
           primary

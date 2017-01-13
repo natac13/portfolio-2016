@@ -1,5 +1,19 @@
 [
     {
+        "title": "FCC Leaders",
+        "codeURL": "https://github.com/natac13/Camper-Leaderboard-FCC",
+        "demoURL": "http://natac13.github.io/Camper-Leaderboard-FCC/",
+        "description": "",
+        "image": "FCCLeaderBoard.png"
+    },
+    {
+        "title": "Url Shortener",
+        "codeURL": "https://github.com/natac13/url-shortener",
+        "demoURL": "https://hidden-brushlands-29088.herokuapp.com/",
+        "description": "",
+        "image": "UrlShortener.png"
+    },
+    {
         "title": "Tic Tac Toe",
         "codeURL": "https://github.com/natac13/Tic-Tac-Toe-Game",
         "demoURL": "http://natac13.github.io/Tic-Tac-Toe-Game/",
@@ -34,7 +48,7 @@
     {
         "title": "FCC Latest News",
         "codeURL": "https://github.com/natac13/FCC-news-feed",
-        "demoURL": "http://codepen.io/natac13/full/ZbOWpV",
+        "demoURL": "",
         "description": "The latest news stories posted to Free Code Camp by the campers. The Free Code Camp community is <span class='bold'>extremely</span> passionate about sharing resources such as blog posts, free assets for a website, and other tutorials that help aid in the learning process. This app displays the news stories with all the relevant information from the FCC api. There are <span class='bold'>4</span> <a href='https://angularjs.org/'>AngularJS</a> filters that a user can use to display the list in different ways: (by date, author, how many likes). Throughout this project I was able to get an understanding of testing <a href='https://angularjs.org/'>AngularJS</a> controllers and filters with <a href='http://jasmine.github.io/'>Jasmine</a> being run by <a href='https://github.com/karma-runner/karma-jasmine'>Karma</a>.",
         "image": "fcc-news.png",
         "alt": "Free Code Camp News"

@@ -6,6 +6,7 @@ import Main from '../components/Main/';
 import Contact from '../components/Contact/';
 import JavascriptExperience from '../components/JavascriptExperience/';
 import ElectricalExperience from '../components/ElectricalExperience/';
+import Tutoring from '../components/Tutoring/';
 
 
 export default function configureRoutes(history) {
@@ -16,6 +17,7 @@ export default function configureRoutes(history) {
         <Route path="contact" component={Contact} />
         <Route path="javascript_experience" component={JavascriptExperience} />
         <Route path="electrical_experience" component={ElectricalExperience} />
+        <Route path="natacsvantagepoint" component={Tutoring} />
       </Route>
     </Router>
   );
