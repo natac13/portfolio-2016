@@ -46,11 +46,11 @@
   }
   @media (min-width:40.063em) {
     /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-    width: 65vw;
+    width: 60vw;
   }
   @media (min-width:60.063em) {
     /* tablet, landscape iPad, lo-res laptops ands desktops */
-    width: 55vw
+    width: 45vw
   }
   @media (min-width:64.063em) {
     /* big landscape tablets, laptops, and desktops */
@@ -119,39 +119,9 @@
 }
 
 .subTitle {
-  font-size: ms(1);
-  text-align: left;
-  margin: 0 0 .5em 0;
-  width: 100%;
-  color: $primary-color;
-  text-shadow: 0 0 1px $secondary-color;
-  font-family: $oswald;
-
-  @media (min-width:20em) {
-    /* smartphones, iPhone, portrait 480x320 phones */
-
-  }
-  @media (min-width:30.063em) {
-    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-
-  }
-  @media (min-width:40.063em) {
-    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-
-  }
-  @media (min-width:60.063em) {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
-
-  }
-  @media (min-width:64.063em) {
-    /* big landscape tablets, laptops, and desktops */
-
-  }
-  @media (min-width:80.063em) {
-    /* hi-res laptops and desktops */
-
-  }
+  composes: title from './Statement/style.scss';
 }
+
 .catch {
   width: 95vw;
   box-shadow: 0 0 10px $secondary-color inset;
@@ -202,50 +172,13 @@
   }
 }
 .price {
-  font-size: ms(1);
-  color: $primary-color;
-  text-shadow: 0 0 2px $secondary-color;
 
-  @media (min-width:20em) {
-    /* smartphones, iPhone, portrait 480x320 phones */
-
-  }
-  @media (min-width:30.063em) {
-    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  p {
+    font-size: ms(1);
+    color: $primary-color;
+    text-shadow: 0 0 2px $secondary-color;
 
   }
-  @media (min-width:40.063em) {
-    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-
-  }
-  @media (min-width:60.063em) {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
-
-  }
-  @media (min-width:64.063em) {
-    /* big landscape tablets, laptops, and desktops */
-
-  }
-  @media (min-width:80.063em) {
-    /* hi-res laptops and desktops */
-
-  }
-}
-
-.answer {
-  font-size: ms(0);
-  line-height: 1.3em;
-  font-family: $roboto-font-stack;
-  color: #333;
-  position: relative;
-
-  &:before {
-    font-family: FontAwesome;
-    content: "\f18e";
-    padding: 0 .25em 0 0;
-    color: $secondary-color;
-  }
-
   @media (min-width:20em) {
     /* smartphones, iPhone, portrait 480x320 phones */
 

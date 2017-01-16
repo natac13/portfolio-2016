@@ -1,39 +1,30 @@
 import React, { PropTypes } from 'react';
 import ImmutablePropTypes from 'react-immutable-proptypes';
+import classnames from 'classnames';
 
-import Header from '../Header';
-import Footer from '../Footer/';
 import ContactForm from '../ContactForm/';
-import Display from '../Display/';
-
-import kebabCase from 'lodash/kebabCase';
 
 import style from './style.scss';
 
 function Contact(props) {
-  const { appName, actions, display, location } = props;
+  const { actions, display, classname } = props;
 
-  const closeDisplay = () => {
-    actions.closeDisplay();
-    // actions.push('/');
-    window.location.href = `https://seancampbellnatac.com/${kebabCase(display.get('subject'))}`;
-  };
+  const wrapperClass = classnames({
+    [style.wrapper]: true,
+    [classname]: !!classname,
+  });
 
   return (
-    <div className={style.wrapper}>
-      <Header appName={appName} pathname={location.pathname} />
-      <Display closeDisplay={closeDisplay} display={display} />
-      <ContactForm actions={actions} />
-      <Footer appName={appName} />
+    <div className={wrapperClass}>
+      <ContactForm actions={actions} display={display} />
     </div>
   );
 }
 
 Contact.propTypes = {
-  appName: PropTypes.string,
   actions: PropTypes.object,
   display: ImmutablePropTypes.map,
-  location: PropTypes.object,
+  classname: PropTypes.string,
 };
 
 export default Contact;

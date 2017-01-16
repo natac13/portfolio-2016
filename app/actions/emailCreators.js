@@ -7,7 +7,7 @@ import { createAction } from 'redux-actions';
 
 import { CALL_API } from '../middleware/api.js';
 
-function sendEmail(userEmail, subject, comments) {
+function sendEmail(userEmail, subject, comments, name) {
   return {
     [CALL_API]: {
       type: SEND_EMAIL,
@@ -15,6 +15,7 @@ function sendEmail(userEmail, subject, comments) {
         userEmail,
         subject,
         comments,
+        name,
       },
     },
   };

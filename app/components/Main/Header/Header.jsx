@@ -6,9 +6,9 @@ import { slice } from 'ramda';
 import { IconButton } from 'react-toolbox/lib/button';
 import { Icon } from 'react-fa';
 
-import { scrollTo, scrollTop } from '../../utils/scroller.js';
+import { scrollTo, scrollTop } from '../../../utils/scroller.js';
 
-import SocialLinks from '../SocialLinks/';
+import SocialLinks from '../../SocialLinks/';
 
 import style from './style.scss';
 
