@@ -57,7 +57,7 @@ app.use('/feedback', mailRouter);
 
 // base route
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../index.html'));
+  res.sendFile(path.join(__dirname, '../app/index.html'));
 });
 
 app.use(errorHandler);

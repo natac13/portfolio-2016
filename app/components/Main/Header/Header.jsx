@@ -19,7 +19,7 @@ function Header(props) {
   return (
     <header className={style.wrapper}>
       <h1 className={style.title}>{!!pathname ? cleanedPathname : 'Sean Campbell'}</h1>
-      {!pathname && <SocialLinks classname={style.socialLinks} />}
+      <SocialLinks className={style.socialLinks} />
 
 
       <IconButton

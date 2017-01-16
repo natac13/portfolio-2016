@@ -6,10 +6,10 @@ import Separator from '../../Separator/';
 import style from './style.scss';
 
 function Statement(props) {
-  const { classname, title, statements } = props;
+  const { className, title, statements } = props;
 
   const wrapperClass = classnames({
-    [classname]: !!classname,
+    [className]: !!className,
     [style.wrapper]: true,
   });
 
@@ -27,7 +27,7 @@ function Statement(props) {
 }
 
 Statement.propTypes = {
-  classname: PropTypes.string,
+  className: PropTypes.string,
   title: PropTypes.string,
   statements: PropTypes.array,
 };

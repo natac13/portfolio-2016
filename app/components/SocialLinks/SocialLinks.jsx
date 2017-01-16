@@ -15,47 +15,50 @@ const TOOLTIP_DELAY = 1050;
 function SocialLinks(props) {
   const wrapperClass = classnames({
     [style.nav]: true,
-    [props.classname]: !!props.classname,
+    [props.className]: !!props.className,
   });
 
   return (
     <section className={wrapperClass}>
       <TooltipButton
         className={style.socialLink}
-        label="LinkedIn"
+        data-hover="LinkedIn"
+        icon={<Icon className={style.icon} name="linkedin" />}
         flat
         href="https://ca.linkedin.com/in/seancampbellnatac"
-        icon={<Icon name="linkedin" />}
         neutral={false}
         tooltip="LinkedIn Account"
         tooltipDelay={TOOLTIP_DELAY}
+        children={<span className={style.span}>LinkedIn</span>}
       />
       <TooltipButton
         className={style.socialLink}
-        label="Github"
+        data-hover="Github"
+        icon={<Icon className={style.icon} name="github" />}
         flat
         href="http://github.com/natac13"
-        icon={<Icon name="github" />}
         neutral={false}
         tooltip="Github Account"
         tooltipDelay={TOOLTIP_DELAY}
+        children={<span className={style.span}>Github</span>}
       />
       <TooltipButton
         className={style.socialLink}
-        label="Twitter"
+        data-hover="Twitter"
+        icon={<Icon className={style.icon} name="twitter" />}
         flat
         href="https://twitter.com/natac1311"
-        icon={<Icon name="twitter" />}
         neutral={false}
         tooltip="Twitter Account"
         tooltipDelay={TOOLTIP_DELAY}
+        children={<span className={style.span}>Twitter</span>}
       />
     </section>
   );
 }
 
 SocialLinks.propTypes = {
-  classname: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default SocialLinks;

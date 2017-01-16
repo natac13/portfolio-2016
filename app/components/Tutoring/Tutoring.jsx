@@ -19,7 +19,7 @@ function Tutoring(props) {
     <Statement
       title={item.title}
       statements={item.statements}
-      classname={item.title === 'Price?' ? style.price : null}
+      className={item.title === 'Price?' ? style.price : null}
     />
   ));
   return (
