@@ -27,12 +27,12 @@ function userResponse(success, subject) {
 
 router.route('/')
   .post(async function(req, res, next) {
-    const { subject, comments, userEmail } = req.body;
+    const { subject, comments, userEmail, name } = req.body;
     const mailgun = new Mailgun({ apiKey, domain });
     const emailOptions = {
       from: userEmail,
       to: toEmail,
-      subject,
+      subject: `From - ${name}`,
       text: comments,
     };
 

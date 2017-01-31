@@ -7,7 +7,7 @@ import connectToDB from './dbConnection.js';
 
 
 import errorHandler from './routes/errorHandler.js';
-import mailRouter from './routes/feedback.js';
+import mailRouter from './routes/mailer.js';
 // import javascriptProjects from './routes/javascriptProjects.js';
 
 /** Webpack imports ***/
@@ -57,7 +57,7 @@ app.use('/feedback', mailRouter);
 
 // base route
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../index.html'));
+  res.sendFile(path.join(__dirname, '../app/index.html'));
 });
 
 app.use(errorHandler);

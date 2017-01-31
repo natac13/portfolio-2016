@@ -2,6 +2,8 @@
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+  position: relative;
+  z-index: 1;
 
 
   @media (min-width:20em) {
@@ -38,23 +40,57 @@
   padding: 0 .5em;
   background: rgba($secondary-color, .3) !important;
   color: $offWhite;
-  transition: color .5s ease-in,
-              background .5s ease-in !important;
   margin-bottom: .5em !important;
+
+  overflow: hidden;
+
+  .span {
+    display: block;
+    transition: transform .4s;
+  }
+
+  &:hover .span,
+  &:focus .span {
+    transform: translateX(150%);
+  }
+
+  .icon {
+    transition: transform .4s;
+  }
+
+  &:hover .icon,
+  &:focus .icon {
+    transform: translateX(800%);
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    content: attr(data-hover);
+    transition: .4s;
+    transform: translateX(-100%);
+    color: $primary-color;
+    background: rgba($secondary-color, .85) !important;
+    font-weight: bold
+  }
+
+  &:hover::before,
+  &:focus::before {
+    transform: translateX(0%);
+  }
 
   &:last-child {
     margin-bottom: 0 !important;
   }
 
-  &:hover {
-    color: $contrast;
-    background: rgba($secondary-color, .8) !important;
-  }
-
-  @media only screen and (max-width: 699px) {
-    padding: .25em .5em;
-    margin: 0 .5em;
-  }
+  // &:hover {
+  //   color: $contrast;
+  //   background: rgba($secondary-color, .8) !important;
+  // }
 
   @media (min-width:20em) {
     /* smartphones, iPhone, portrait 480x320 phones */
@@ -70,7 +106,7 @@
   }
   @media (min-width:60.063em) {
     /* tablet, landscape iPad, lo-res laptops ands desktops */
-
+    margin: 0;
   }
   @media (min-width:64.063em) {
     /* big landscape tablets, laptops, and desktops */

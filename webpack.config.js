@@ -20,7 +20,7 @@ module.exports = {
   output: {
     path: BUILD_PATH,
     filename: 'bundle.js',
-    publicPath: '/assets/', // where the generated static files reside.
+    publicPath: '/', // where the generated static files reside.
   },
   resolve: {
     extensions: ['', '.js', '.jsx', '.json', '.node', '.png', '.css', '.scss'],

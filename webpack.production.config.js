@@ -39,7 +39,7 @@ module.exports = {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract(
           'style-loader',
-          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass!toolbox'),
+          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass'),
       },
       {
         test: /\.css$/,
@@ -69,11 +69,14 @@ module.exports = {
     ],
   },
   postcss: [autoprefixer],
-  toolbox: { theme: 'theme.scss' },
+  sassLoader: {
+    data: `@import "${path.resolve(__dirname, 'app/stylesheets/theme.scss')}";`,
+  },
   plugins: [
     new ExtractTextPlugin('style.css', { allChunk: true }),
     new HtmlWebpackPlugin({
       template: './app/index.html',
+      inject: false,
     }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({

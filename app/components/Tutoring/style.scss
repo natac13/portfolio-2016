@@ -1,0 +1,206 @@
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width:20em) {
+    /* smartphones, iPhone, portrait 480x320 phones */
+
+  }
+  @media (min-width:30.063em) {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+  }
+  @media (min-width:40.063em) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+
+  }
+  @media (min-width:60.063em) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+  }
+  @media (min-width:64.063em) {
+    /* big landscape tablets, laptops, and desktops */
+
+  }
+  @media (min-width:80.063em) {
+    /* hi-res laptops and desktops */
+
+  }
+}
+.content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  width: 95vw;
+
+  @media (min-width:20em) {
+    /* smartphones, iPhone, portrait 480x320 phones */
+
+  }
+  @media (min-width:30.063em) {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+  }
+  @media (min-width:40.063em) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    width: 60vw;
+  }
+  @media (min-width:60.063em) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    width: 45vw
+  }
+  @media (min-width:64.063em) {
+    /* big landscape tablets, laptops, and desktops */
+
+  }
+  @media (min-width:80.063em) {
+    /* hi-res laptops and desktops */
+
+  }
+}
+.subjects {
+
+  @media (min-width:20em) {
+    /* smartphones, iPhone, portrait 480x320 phones */
+
+  }
+  @media (min-width:30.063em) {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+  }
+  @media (min-width:40.063em) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+
+  }
+  @media (min-width:60.063em) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+  }
+  @media (min-width:64.063em) {
+    /* big landscape tablets, laptops, and desktops */
+
+  }
+  @media (min-width:80.063em) {
+    /* hi-res laptops and desktops */
+
+  }
+}
+
+.subject {
+  margin-bottom: .5em;
+
+  @media (min-width:20em) {
+    /* smartphones, iPhone, portrait 480x320 phones */
+
+  }
+  @media (min-width:30.063em) {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+  }
+  @media (min-width:40.063em) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+
+  }
+  @media (min-width:60.063em) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    margin-bottom: .25em;
+  }
+  @media (min-width:64.063em) {
+    /* big landscape tablets, laptops, and desktops */
+
+  }
+  @media (min-width:80.063em) {
+    /* hi-res laptops and desktops */
+
+  }
+}
+
+.subTitle {
+  composes: title from './Statement/style.scss';
+}
+
+.catch {
+  width: 95vw;
+  box-shadow: 0 0 10px $secondary-color inset;
+  margin: 3em 0 2em 0;
+
+  p {
+    text-align: center;
+    font-size: ms(0);
+    color: $primary-color;
+    text-shadow: 0 0 2px $secondary-color;
+
+    &:before {
+      font-family: FontAwesome;
+      content: '\f0da';
+      padding-right: .2em;
+    }
+
+    &:after {
+      font-family: FontAwesome;
+      content: '\f128';
+      padding-left: .2em;
+    }
+  }
+
+  @media (min-width:20em) {
+    /* smartphones, iPhone, portrait 480x320 phones */
+
+  }
+  @media (min-width:30.063em) {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+  }
+  @media (min-width:40.063em) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    width: 80vw;
+  }
+  @media (min-width:60.063em) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    width: 70vw;
+  }
+  @media (min-width:64.063em) {
+    /* big landscape tablets, laptops, and desktops */
+
+  }
+  @media (min-width:80.063em) {
+    /* hi-res laptops and desktops */
+
+  }
+}
+.price {
+
+  p {
+    font-size: ms(0);
+    color: $primary-color;
+    text-shadow: 0 0 2px $secondary-color;
+
+  }
+  @media (min-width:20em) {
+    /* smartphones, iPhone, portrait 480x320 phones */
+
+  }
+  @media (min-width:30.063em) {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+  }
+  @media (min-width:40.063em) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+
+  }
+  @media (min-width:60.063em) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+  }
+  @media (min-width:64.063em) {
+    /* big landscape tablets, laptops, and desktops */
+
+  }
+  @media (min-width:80.063em) {
+    /* hi-res laptops and desktops */
+
+  }
+}

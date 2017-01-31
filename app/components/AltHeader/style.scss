@@ -3,8 +3,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: $primary-color;
+  width: 100%;
+  position: relative;
 
-
+  &:after {
+    bottom: -2em;
+    z-index: 10;
+    background: inherit;
+    left: 50%;
+    width: 4em;
+    height: 4em;
+    transform: translateX(-50%) rotate(45deg);
+    position: absolute;
+    content: '';
+    pointer-events: none;
+    box-sizing: border-box;
+  }
 
   @media (min-width:20em) {
     /* smartphones, iPhone, portrait 480x320 phones */
@@ -67,9 +82,10 @@
 }
 
 .title {
-  color: $primary-color;
+  color: $offWhite;
   font-size: ms(2);
   text-align: center;
+  z-index: 11;
 
   @media (min-width:20em) {
     /* smartphones, iPhone, portrait 480x320 phones */
