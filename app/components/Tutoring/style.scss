@@ -125,7 +125,7 @@
 .catch {
   width: 95vw;
   box-shadow: 0 0 10px $secondary-color inset;
-  margin-bottom: 2em;
+  margin: 3em 0 2em 0;
 
   p {
     text-align: center;
@@ -174,7 +174,7 @@
 .price {
 
   p {
-    font-size: ms(1);
+    font-size: ms(0);
     color: $primary-color;
     text-shadow: 0 0 2px $secondary-color;
 

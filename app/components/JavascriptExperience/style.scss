@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
+  margin-top: 3em;
 
   @media (min-width:20em) {
     /* smartphones, iPhone, portrait 480x320 phones */
@@ -22,7 +23,7 @@
   }
   @media (min-width:40.063em) {
     /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-
+    margin-top: 0;
   }
   @media (min-width:60.063em) {
     /* tablet, landscape iPad, lo-res laptops ands desktops */

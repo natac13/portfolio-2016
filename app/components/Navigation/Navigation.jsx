@@ -12,7 +12,7 @@ import style from './style.scss';
 
 function Navigation(props) {
   const { navigation, actions, pathname } = props;
-  console.log(props);
+  // console.log(props);
 
   const navBtnClass = classnames({
     [style.navBtn]: true,
@@ -77,27 +77,16 @@ function Navigation(props) {
         />
         <Button
           className={style.navLink}
-          label="JavaScript Experience"
-          flat
-          primary
-          icon={<Icon name="code" />}
-          onClick={() => {
-            actions.toggleNav();
-            return actions.pageChange('javascript_experience');
-          }}
-        />
-        <Button
-          className={style.navLink}
-          label="Tutoring - Electrical"
+          label="Tutoring Service"
           flat
           primary
           icon={<Icon name="graduation-cap" />}
           onClick={() => {
             actions.toggleNav();
-            return actions.pageChange('natacsvantagepoint');
+            return actions.pageChange('tutoring');
           }}
         />
-        <Button
+{/*        <Button
           className={style.navLink}
           label="PLC Experience"
           flat
@@ -107,7 +96,7 @@ function Navigation(props) {
             actions.toggleNav();
             return actions.pageChange('plcKnowledge');
           }}
-        />
+        />*/}
         <Button
           className={style.navLink}
           label="Electrical Experience"
@@ -121,6 +110,17 @@ function Navigation(props) {
         />
         <Button
           className={style.navLink}
+          label="JavaScript Experience"
+          flat
+          primary
+          icon={<Icon name="code" />}
+          onClick={() => {
+            actions.toggleNav();
+            return actions.pageChange('javascript_experience');
+          }}
+        />
+{/*        <Button
+          className={style.navLink}
           label="Reading List"
           flat
           primary
@@ -129,7 +129,7 @@ function Navigation(props) {
             actions.toggleNav();
             return actions.pageChange('readingList');
           }}
-        />
+        />*/}
         <Button
           className={style.navLink}
           label="Contact"

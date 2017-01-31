@@ -17,7 +17,7 @@ export default function configureRoutes(history) {
         <Route path="contact" component={Contact} />
         <Route path="javascript_experience" component={JavascriptExperience} />
         <Route path="electrical_experience" component={ElectricalExperience} />
-        <Route path="natacsvantagepoint" component={Tutoring} />
+        <Route path="tutoring" component={Tutoring} />
       </Route>
     </Router>
   );
