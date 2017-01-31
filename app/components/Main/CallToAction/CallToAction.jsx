@@ -31,11 +31,11 @@ function CallToAction(props) {
       </p>
       <Button
         className={style.ctaBtn}
-        data-hover="Tutoring Service"
+        data-hover="My Services"
         flat
         onClick={() => actions.pageChange('tutoring')}
         neutral={false}
-        label="Tutoring Service"
+        label="My Services"
       />
     </section>
   );

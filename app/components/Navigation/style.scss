@@ -2,7 +2,7 @@
 .navBtn {
   position: fixed;
   top: .3em;
-  right: .3em;
+  left: .3em;
   z-index: 999;
   background-color: rgba($offWhite, .65) !important;
   border-radius: 2px;
@@ -34,7 +34,7 @@
   @media (min-width:40.063em) {
     /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
     top: 1em;
-    right: 1em;
+    left: 1em;
   }
   @media (min-width:60.063em) {
     /* tablet, landscape iPad, lo-res laptops ands desktops */

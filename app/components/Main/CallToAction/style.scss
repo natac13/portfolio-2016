@@ -149,7 +149,7 @@
       height: 95%;
       border: 3px solid $secondary-color;
       content: '';
-      transition: transform .3s, opacity .3s;
+      transition: transform .5s, opacity .5s;
     }
 
     &::after {

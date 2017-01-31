@@ -36,7 +36,7 @@ function Navigation(props) {
       <Drawer
         active={navigation.get('open')}
         onOverlayClick={actions.toggleNav}
-        type="right"
+        type="left"
         className={style.drawer}
       >
         <Button
@@ -83,6 +83,7 @@ function Navigation(props) {
           icon={<Icon name="graduation-cap" />}
           onClick={() => {
             actions.toggleNav();
+            scrollTop();
             return actions.pageChange('tutoring');
           }}
         />
@@ -105,6 +106,7 @@ function Navigation(props) {
           icon={<Icon name="bolt" />}
           onClick={() => {
             actions.toggleNav();
+            scrollTop();
             return actions.pageChange('electrical_experience');
           }}
         />
@@ -116,6 +118,7 @@ function Navigation(props) {
           icon={<Icon name="code" />}
           onClick={() => {
             actions.toggleNav();
+            scrollTop();
             return actions.pageChange('javascript_experience');
           }}
         />
@@ -138,7 +141,19 @@ function Navigation(props) {
           icon={<Icon name="envelope" />}
           onClick={() => {
             actions.toggleNav();
+            scrollTop();
             return actions.pageChange('contact');
+          }}
+        />
+        <Button
+          className={style.navLink}
+          label="Top"
+          flat
+          primary
+          icon={<Icon name="angle-double-up" />}
+          onClick={() => {
+            actions.toggleNav();
+            return scrollTop();
           }}
         />
       </Drawer>

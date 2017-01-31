@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import ImmutablePropTypes from 'react-immutable-proptypes';
 
 import Header from './Header';
 import Footer from '../Footer/';
@@ -9,12 +10,12 @@ import CallToAction from './CallToAction/';
 import style from './style.scss';
 
 function Main(props) {
-  const { appName, actions } = props;
+  const { appName, actions, display } = props;
   return (
     <div className={style.wrapper}>
       <Header {...props} />
       <section className={style.main}>
-        <About />
+        <About actions={actions} revealMoreAbout={display.get('revealMoreAbout')} />
         <CallToAction actions={actions} />
         {/*<p>Electrical Apps by me, an electrical apprentice</p>
         <a href="https://seancampbellnatac.com/conduit-fill/">Conduit Fill - 2015 CodeBook</a>
@@ -29,6 +30,7 @@ function Main(props) {
 Main.propTypes = {
   appName: PropTypes.string,
   actions: PropTypes.object.isRequried,
+  display: ImmutablePropTypes.map.isRequired,
 };
 
 export default Main;
