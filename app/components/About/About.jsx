@@ -49,8 +49,9 @@ function About(props) {
       <p className={style.spareTime}>
         {`During my spare time and time off from working construction, I have found
           an enjoyment out of teaching myself other skills that could prove advantagous
-          to me one day. The main one being web application development using JavsScript.
-          Allowing me to build this website and various projects. Recently after completing
+          to me one day. One being web and application development using JavsScript
+          nodejs React and much more. A skill which enabled me to build this
+          website and various projects. Recently after completing
           my trade school and being exposed to PLC programming I have started to invest
           sometime in venturing into that area. I have taking 2 courses beside the
           intro from trade school as well as built my own PLC trainer.`}

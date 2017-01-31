@@ -10,11 +10,11 @@
   }
   @media (min-width:30.063em) {
     /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    width: 65%;
 
   }
   @media (min-width:40.063em) {
     /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-    width: 65%;
   }
   @media (min-width:60.063em) {
     /* tablet, landscape iPad, lo-res laptops ands desktops */
@@ -134,13 +134,13 @@
   }
   @media (min-width:30.063em) {
     /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    flex-flow: row nowrap;
+    perspective: 1000px;
+    width: 125%;
 
   }
   @media (min-width:40.063em) {
     /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-    flex-flow: row nowrap;
-    perspective: 1000px;
-    width: 125%;
 
   }
   @media (min-width:60.063em) {
@@ -198,16 +198,16 @@
   }
   @media (min-width:30.063em) {
     /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-
-  }
-  @media (min-width:40.063em) {
-    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
     order: 1;
     width: 300px;
     height: 400px;
     margin-left: auto;
     transform: rotateY(-10deg);
     transform-origin: right;
+
+  }
+  @media (min-width:40.063em) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 
   }
   @media (min-width:60.063em) {

@@ -12,13 +12,13 @@
   }
   @media (min-width:30.063em) {
     /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 60%;
 
   }
   @media (min-width:40.063em) {
     /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    width: 50%;
   }
   @media (min-width:60.063em) {
     /* tablet, landscape iPad, lo-res laptops ands desktops */

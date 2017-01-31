@@ -3,6 +3,7 @@ import React, { PropTypes } from 'react';
 import Header from './Header';
 import Footer from '../Footer/';
 import About from '../About/';
+import CallToAction from './CallToAction/';
 
 
 import style from './style.scss';
@@ -14,6 +15,7 @@ function Main(props) {
       <Header {...props} />
       <section className={style.main}>
         <About />
+        <CallToAction actions={actions} />
         {/*<p>Electrical Apps by me, an electrical apprentice</p>
         <a href="https://seancampbellnatac.com/conduit-fill/">Conduit Fill - 2015 CodeBook</a>
         <a href="https://seancampbellnatac.com/voltage-drop/">Voltage Drop - 2015 CodeBook</a>
