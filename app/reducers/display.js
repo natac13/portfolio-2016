@@ -3,6 +3,7 @@ import {
   SET_ERROR,
   EMAIL_SENT,
   CLOSE_DISPLAY,
+  TOGGLE_MORE_ABOUT,
 } from '../constants/';
 
 const initalState = Map({
@@ -10,6 +11,7 @@ const initalState = Map({
   emailSent: false,
   emailSentMessage: undefined,
   subject: undefined,
+  revealMoreAbout: false,
 });
 
 function displayError(state, error) {
@@ -34,6 +36,8 @@ function display(state = initalState, action) {
       return emailSent(state, action.payload);
     case CLOSE_DISPLAY:
       return state.set('emailSent', false);
+    case TOGGLE_MORE_ABOUT:
+      return state.set('revealMoreAbout', !state.get('revealMoreAbout'));
     default:
       return state;
   }

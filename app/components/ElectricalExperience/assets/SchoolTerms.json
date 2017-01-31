@@ -1,0 +1,23 @@
+[
+    {
+        "term": 1,
+        "school": "Fanshawe College",
+        "gpa": 4.15,
+        "year": 2013,
+        "awards": ["Dean's Honor Role"]
+    },
+    {
+        "term": 2,
+        "school": "Fanshawe College",
+        "gpa": 4.18,
+        "year": 2014,
+        "awards": ["Dean's Honor Role"]
+    },
+    {
+        "term": 3,
+        "school": "Fanshawe College",
+        "gpa": 4.17,
+        "year": 2016,
+        "awards": ["Dean's Honor Role", "3rd Highest GPA for Program"]
+    }
+]

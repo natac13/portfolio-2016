@@ -20,7 +20,7 @@ module.exports = {
   output: {
     path: BUILD_PATH,
     filename: 'bundle.js',
-    publicPath: '/assets/', // where the generated static files reside.
+    publicPath: '/', // where the generated static files reside.
   },
   resolve: {
     extensions: ['', '.js', '.jsx', '.json', '.node', '.png', '.css', '.scss'],
@@ -40,7 +40,7 @@ module.exports = {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract(
           'style-loader',
-          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass!toolbox'),
+          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass'),
       },
       {
         test: /\.css$/,
@@ -70,7 +70,9 @@ module.exports = {
     ],
   },
   postcss: [autoprefixer],
-  toolbox: { theme: 'theme.scss' },
+  sassLoader: {
+    data: `@import "${path.resolve(__dirname, 'app/stylesheets/theme.scss')}";`,
+  },
   plugins: [
     new ExtractTextPlugin('style.css', { allChunk: true }),
     new webpack.optimize.OccurenceOrderPlugin(),

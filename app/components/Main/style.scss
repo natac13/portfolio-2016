@@ -4,3 +4,16 @@
   justify-content: center;
   align-items: center;
 }
+
+.main {
+  background-color: $offWhite;
+  width: 105vw;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+}
+
+.socialLinks {
+  margin: 3em;
+}
