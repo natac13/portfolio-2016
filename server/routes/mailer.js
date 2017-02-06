@@ -38,8 +38,11 @@ router.route('/')
 
     mailgun.messages().send(emailOptions, (err, body) => {
       if (err) {
+        console.log('email not sent');
         return next(userResponse(false));
       }
+      console.log(body);
+      console.log('maeesage sent');
       return res.json(userResponse(true, subject));
     });
   });
