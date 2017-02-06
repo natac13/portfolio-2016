@@ -8,7 +8,7 @@ import favicon from 'serve-favicon';
 
 
 import errorHandler from './routes/errorHandler.js';
-import mailRouter from './routes/feedback.js';
+import mailRouter from './routes/mailer.js';
 
 require('dotenv').config();
 const app = express();
