@@ -1,6 +1,6 @@
 import express from 'express';
 import Mailgun from 'mailgun-js';
-
+import axios from 'axios';
 const router = express.Router();
 
 const apiKey = process.env.MAILGUN_API_KEY;
@@ -46,5 +46,25 @@ router.route('/')
       return res.json(userResponse(true, subject));
     });
   });
+
+// router.route('/')
+//   .post(async function(req, res, next) {
+//     const postURL = 'https://api.mailgun.net/v3/seancampbell.com/messages';
+//     const opt = {
+//       auth: 'api:' + apiKey,
+//       params: {
+//         from: 'test@example.com',
+//         to: ['sean.campbell13@gmail.com'],
+//         text: "tetsting",
+//       },
+//     };
+//     axios.post(postURL, opt)
+//       .then(() => {
+//         console.log('yesp');
+//       })
+//       .catch(console.log);
+
+
+//   });
 
 export default router;
