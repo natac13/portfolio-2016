@@ -1,11 +1,15 @@
 import express from 'express';
-import Mailgun from 'mailgun-js';
+// import Mailgun from 'mailgun-js';
 import axios from 'axios';
 const router = express.Router();
+
+import mailgun from 'mailgun';
 
 const apiKey = process.env.MAILGUN_API_KEY;
 const domain = process.env.MAILGUN_DOMAIN;
 const toEmail = process.env.EMAIL;
+
+const mg = new mailgun.Mailgun(apiKey);
 
 
 function userResponse(success, subject) {
@@ -25,46 +29,51 @@ function userResponse(success, subject) {
 }
 
 
-router.route('/')
-  .post(async function(req, res, next) {
-    const { subject, comments, userEmail, name } = req.body;
-    const mailgun = new Mailgun({ apiKey, domain });
-    const emailOptions = {
-      from: userEmail,
-      to: toEmail,
-      subject: `From - ${name}`,
-      text: comments,
-    };
+// router.route('/')
+//   .post(async function(req, res, next) {
+//     const { subject, comments, userEmail, name } = req.body;
+//     const mailgun = new Mailgun({ apiKey, domain });
+//     const emailOptions = {
+//       from: userEmail,
+//       to: toEmail,
+//       subject: `From - ${name}`,
+//       text: comments,
+//     };
 
-    mailgun.messages().send(emailOptions, (err, body) => {
-      if (err) {
-        console.log('email not sent');
-        return next(userResponse(false));
-      }
-      console.log(body);
-      console.log('maeesage sent');
-      return res.json(userResponse(true, subject));
-    });
-  });
+//     mailgun.messages().send(emailOptions, (err, body) => {
+//       if (err) {
+//         console.log('email not sent');
+//         return next(userResponse(false));
+//       }
+//       console.log(body);
+//       console.log('maeesage sent');
+//       return res.json(userResponse(true, subject));
+//     });
+//   });
 
 // router.route('/')
 //   .post(async function(req, res, next) {
-//     const postURL = 'https://api.mailgun.net/v3/seancampbell.com/messages';
-//     const opt = {
-//       auth: 'api:' + apiKey,
-//       params: {
-//         from: 'test@example.com',
-//         to: ['sean.campbell13@gmail.com'],
-//         text: "tetsting",
-//       },
-//     };
-//     axios.post(postURL, opt)
-//       .then(() => {
-//         console.log('yesp');
-//       })
-//       .catch(console.log);
-
+//     const { subject, comments, userEmail, name } = req.body;
+//     mg.messages.create(domain, {
+//       from: userEmail,
+//       to: [toEmail],
+//       subject: `From - ${name}`,
+//       text: comments,
+//     })
+//     .then(msg => res.json(userResponse(true, subject))) // logs response data
+//     .catch(err => next(userResponse(false))); // logs any error
 
 //   });
+
+
+router.route('/')
+  .post(async function(req, res, next) {
+    const { subject, comments, userEmail, name } = req.body;
+
+    mg.sendText(userEmail, [toEmail], name, comments, 'seancampbellnatac.com', (err) => {
+      if (err) { next(err); }
+      res.json(userResponse(true));
+    });
+  });
 
 export default router;
