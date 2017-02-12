@@ -28,7 +28,7 @@ function Display(props) {
     >
       <div className={style.message}>
         {!!error ?
-          <p className={style.short}>There was an error...</p> :
+          <p className={style.short}>There was an error... {error}</p> :
           <p className={style.short}>{emailSentMessage}</p>
         }
       </div>

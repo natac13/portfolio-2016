@@ -12,13 +12,14 @@ const toEmail = process.env.EMAIL;
 const mg = new mailgun.Mailgun(apiKey);
 
 
-function userResponse(success, subject) {
+function userResponse(success, subject, error) {
   if (!success) {
     return {
       success: false,
       type: 'emailError',
       message: 'There was an issue sending your email. This is a problem with the website.',
       subject,
+      error,
     };
   }
   return {
@@ -71,7 +72,7 @@ router.route('/')
     const { subject, comments, userEmail, name } = req.body;
 
     mg.sendText(userEmail, [toEmail], name, comments, 'seancampbellnatac.com', (err) => {
-      if (err) { return res.json(userResponse(false)); }
+      if (err) { return res.json(userResponse(false, '', err)); }
       return res.json(userResponse(true));
     });
   });
