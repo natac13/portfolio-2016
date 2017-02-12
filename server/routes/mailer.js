@@ -72,7 +72,7 @@ router.route('/')
     const { subject, comments, userEmail, name } = req.body;
 
     mg.sendText(userEmail, [toEmail], name, comments, 'seancampbellnatac.com', (err) => {
-      if (err) { return res.json(userResponse(false, '', JSON.stringify(err, null, 4))); }
+      if (err) { return res.json(userResponse(false, '', err)); }
       return res.json(userResponse(true));
     });
   });
