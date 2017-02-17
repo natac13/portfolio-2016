@@ -5,6 +5,7 @@ import { List, ListItem } from 'react-toolbox/lib/list';
 import AltHeader from '../AltHeader/';
 import Separator from '../Separator/';
 import ContactForm from '../ContactForm/';
+import Button from '../Button/';
 
 import Statement from './Statement/';
 

@@ -4,6 +4,8 @@ import classnames from 'classnames';
 
 import ContactForm from '../ContactForm/';
 
+import { Button } from 'react-toolbox/lib/button';
+
 import style from './style.scss';
 
 function Contact(props) {
@@ -17,6 +19,10 @@ function Contact(props) {
   return (
     <div className={wrapperClass}>
       <ContactForm actions={actions} display={display} />
+      {/*<Button
+        href="mailto:sean.campbell13@gmail.com"
+        label="Contact Me"
+      />*/}
     </div>
   );
 }
