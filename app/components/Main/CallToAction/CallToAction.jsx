@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import classnames from 'classnames';
 
 import { Button } from 'react-toolbox/lib/button';
-
+import { scrollTop } from '../../../utils/scroller.js';
 import Separator from '../../Separator/';
 
 import style from './style.scss';
@@ -33,7 +33,10 @@ function CallToAction(props) {
         className={style.ctaBtn}
         data-hover="My Services"
         flat
-        onClick={() => actions.pageChange('tutoring')}
+        onClick={() => {
+          scrollTop();
+          return actions.pageChange('tutoring');
+        }}
         neutral={false}
         label="My Services"
       />

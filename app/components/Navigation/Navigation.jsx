@@ -133,7 +133,7 @@ function Navigation(props) {
             return actions.pageChange('readingList');
           }}
         />*/}
-        <Button
+        {/*<Button
           className={style.navLink}
           label="Contact"
           flat
@@ -144,7 +144,7 @@ function Navigation(props) {
             scrollTop();
             return actions.pageChange('contact');
           }}
-        />
+        />*/}
         <Button
           className={style.navLink}
           label="Top"
