@@ -29,20 +29,19 @@ function userResponse(success, subject, error) {
 router.route('/')
   .post(async function(req, res, next) {
     const { subject, comments, userEmail, name } = req.body;
-    return res.json(userResponse(true));
-    // const emailOptions = {
-    //   from: `${name} <${userEmail}>`,
-    //   to: toEmail,
-    //   subject: 'Website Contact',
-    //   text: comments,
-    // };
+    const emailOptions = {
+      from: `${name} <${userEmail}>`,
+      to: toEmail,
+      subject: 'Website Contact',
+      text: comments,
+    };
 
-    // mailgun.messages().send(emailOptions, (err, body) => {
-    //   if (err) {
-    //     return next(userResponse(false, '', err));
-    //   }
-    //   return res.json(userResponse(true, undefined));
-    // });
+    mailgun.messages().send(emailOptions, (err, body) => {
+      if (err) {
+        return next(userResponse(false, '', err));
+      }
+      return res.json(userResponse(true, undefined));
+    });
   });
 
 export default router;

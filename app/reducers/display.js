@@ -24,9 +24,6 @@ function emailSent(state, data) {
   let tempState = state;
   tempState = tempState.set('emailSent', true);
   tempState = tempState.set('emailSentMessage', data.message);
-  // tempState = tempState.set('error', data.error);
-  console.log(data.error);
-  console.log('error mesage');
   tempState = tempState.set('subject', data.subject);
   return tempState;
 }
