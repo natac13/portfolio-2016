@@ -68,12 +68,12 @@ function Tutoring(props) {
             />
           </List>
         </section>
-      {/*<ContactForm actions={actions} display={display} />*/}
-      <Button
+      <ContactForm actions={actions} display={display} />
+      {/*<Button
         label="Contact Me"
         hoverStyle="fallDown"
         href={`mailto:sean.campbell13@gmail.com?subject=Tutoring%20Interest`}
-      />
+      />*/}
     </div>
   );
 }
