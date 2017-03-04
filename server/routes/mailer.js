@@ -9,7 +9,7 @@ const toEmail = process.env.EMAIL;
 
 // const mailgun = require('mailgun-js')({ apiKey, domain });
 const sendinblue = require('sendinblue-api');
-const blueMail = new sendinblue({ apiKey })
+const blueMail = new sendinblue({ apiKey: 'NjEhPrDS1cws9IAb' })
 
 function userResponse(success, subject, error) {
   if (!success) {
