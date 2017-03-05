@@ -37,7 +37,7 @@ router.route('/')
       subject: 'Website Contact',
       text: comments,
     };
-    next(userResponse(false, '', err))
+    return res.json(userResponse(true, undefined));
 
     // blueMail.send_email(emailOptions, (err, response) => {
     //   if (err) { return next(userResponse(false, '', err)); }
