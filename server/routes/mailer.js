@@ -3,7 +3,7 @@ import express from 'express';
 const router = express.Router();
 
 const apiKey = process.env.MAILGUN_API_KEY;
-const apiKey = process.env.SENDINBLUE_API_KEY;
+// const apiKey = process.env.SENDINBLUE_API_KEY;
 const domain = process.env.MAILGUN_DOMAIN;
 const toEmail = process.env.EMAIL;
 
