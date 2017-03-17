@@ -68,8 +68,8 @@ function Tutoring(props) {
             />
           </List>
         </section>
-      {/*<ContactForm actions={actions} display={display} />*/}
-      <div className={style.contact}>
+      <ContactForm actions={actions} display={display} />
+      {/*<div className={style.contact}>
         <Button
           label="Contact Me"
           hoverStyle="fallDown"
@@ -80,7 +80,7 @@ function Tutoring(props) {
           hoverStyle="fallDown"
           href="http://www.kijiji.ca/v-view-details.html?adId=1231531061&siteLocale=en_CA&requestSource=b"
         />
-      </div>
+      </div>*/}
     </div>
   );
 }
