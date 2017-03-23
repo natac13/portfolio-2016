@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux-immutable';
-import { reducer as formReducer } from 'redux-form';
-import { fromJS } from 'immutable';
+import { reducer as formReducer } from 'redux-form/immutable';
+
 
 import routing from './routing.js';
 import display from './display.js';
@@ -15,7 +15,7 @@ const rootReducer = combineReducers(Object.assign(
     routing,
     navigation,
     windowSize,
-    form: (state = fromJS({}), action) => fromJS(formReducer(state.toJS(), action)),
+    form: formReducer,
   },
 ));
 
