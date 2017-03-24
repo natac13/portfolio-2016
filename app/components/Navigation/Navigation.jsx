@@ -87,6 +87,17 @@ function Navigation(props) {
             return actions.pageChange('tutoring');
           }}
         />
+        <Button
+          className={style.navLink}
+          label="Wire Number Phase Colour App"
+          flat
+          primary
+          onClick={() => {
+            actions.toggleNav();
+            scrollTop();
+            return actions.pageChange('wire-number-phase-colour');
+          }}
+        />
 {/*        <Button
           className={style.navLink}
           label="PLC Experience"

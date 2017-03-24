@@ -14,7 +14,7 @@ function About(props) {
 
   const moreClass = classnames({
     [style.more]: true,
-    [style.slideDown]: revealMoreAbout,
+    [style.slideDown]: true, // override
   });
 
   return (
@@ -70,13 +70,13 @@ function About(props) {
             intro from trade school as well as built my own PLC trainer.`}
         </p>
       </section>
-      <Button
+{/*      <Button
         className={style.seeMore}
         label={revealMoreAbout ? 'Close' : 'See More'}
         flat
         onClick={actions.toggleMoreAbout}
         primary
-      />
+      />*/}
     </div>
   );
 }

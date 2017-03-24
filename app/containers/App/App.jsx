@@ -32,7 +32,6 @@ function App(props) {
 }
 
 App.propTypes = {
-  form: ImmutablePropTypes.map.isRequired,
   routing: ImmutablePropTypes.map.isRequired,
   actions: PropTypes.object.isRequired,
   appName: PropTypes.string.isRequired,
@@ -45,7 +44,6 @@ App.propTypes = {
 function mapStateToProps(state) {
   return {
     appName: 'Portfolio',
-    form: state.get('form'),
     routing: state.get('routing'),
     display: state.get('display'),
     navigation: state.get('navigation'),
