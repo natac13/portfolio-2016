@@ -92,11 +92,7 @@ function Navigation(props) {
           label="Wire Number Phase Colour App"
           flat
           primary
-          onClick={() => {
-            actions.toggleNav();
-            scrollTop();
-            return actions.pageChange('wire-number-phase-colour');
-          }}
+          href="https://seancampbellnatac.com/wire-number-phase-colour"
         />
 {/*        <Button
           className={style.navLink}
